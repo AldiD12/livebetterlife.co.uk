@@ -10,12 +10,12 @@ const Hero = () => {
           loop
           playsInline
           className="w-full h-full object-cover"
-          poster="/images/projects/project1/after/nw9-london-flat-conversion-after-living.jpeg"
+          poster="/images/projects/project2/after/project2.jpeg"
         >
-          <source src="/images/projects/project4/after/fullHouseRenovation.mp4" type="video/mp4" />
+          <source src="/images/projects/project2/after/after.mp4" type="video/mp4" />
           {/* Fallback image for browsers that don't support video */}
           <img
-            src="/images/projects/project1/after/nw9-london-flat-conversion-after-living.jpeg"
+            src="/images/projects/project2/after/project2.jpeg"
             alt="Luxury home interior with modern design and elegant finishes"
             className="w-full h-full object-cover"
           />
