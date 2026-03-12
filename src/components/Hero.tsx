@@ -11,8 +11,12 @@ const Hero = () => {
           playsInline
           className="w-full h-full object-cover"
           poster="/images/projects/project2/after/project2.jpeg"
+          onError={(e) => console.error('Video failed to load:', e)}
+          onLoadStart={() => console.log('Video loading started')}
+          onCanPlay={() => console.log('Video can play')}
         >
           <source src="/images/projects/project2/after/after.mp4" type="video/mp4" />
+          <source src="/images/projects/project2/after/after.mp4" type="video/quicktime" />
           {/* Fallback image for browsers that don't support video */}
           <img
             src="/images/projects/project2/after/project2.jpeg"
