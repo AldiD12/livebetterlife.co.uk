@@ -1,0 +1,116 @@
+# LiveBetterLife .htaccess - Optimized for React SPA & Local SEO
+RewriteEngine On
+Options -Indexes +FollowSymLinks
+
+# ==========================================
+# 1. FORCE HTTPS & NON-WWW
+# ==========================================
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+
+# ==========================================
+# 2. SEO REDIRECTS (CRITICAL - MUST BE BEFORE REACT LOGIC)
+# ==========================================
+
+# --- A. Portfolio Redirects (Your Existing Ones) ---
+RewriteRule ^portfolio/kingsbury-conversion/?$ /portfolio/house-conversion-flats-kingsbury-nw9 [R=301,L]
+RewriteRule ^portfolio/brondesbury-flat/?$ /portfolio/victorian-flat-renovation-brondesbury-nw6 [R=301,L]
+RewriteRule ^portfolio/russell-gardens/?$ /portfolio/luxury-renovation-russell-gardens-mews-kensington-w14 [R=301,L]
+RewriteRule ^portfolio/tennyson-road/?$ /portfolio/victorian-house-renovation-tennyson-road-nw6 [R=301,L]
+RewriteRule ^portfolio/davies-street/?$ /portfolio/luxury-office-renovation-mayfair-w1k [R=301,L]
+RewriteRule ^portfolio/kenton-lane/?$ /portfolio/ground-floor-renovation-kenton-harrow-ha3 [R=301,L]
+
+# --- B. Service Page "Zombie" Redirects (NEW - DO NOT SKIP) ---
+# Redirecting generic "-london" pages to specific specialist pages to save SEO juice.
+
+# Renovations -> Victorian Page
+RewriteRule ^services/full-house-renovation-london/?$ /services/full-house-renovation-victorian-edwardian [R=301,L]
+RewriteRule ^services/whole-property-renovations-london/?$ /services/full-house-renovation-victorian-edwardian [R=301,L]
+
+# Extensions -> Kitchen/Side Returns Page
+RewriteRule ^services/house-extensions-london/?$ /services/kitchen-extensions-side-returns [R=301,L]
+RewriteRule ^services/kitchen-extension-london/?$ /services/kitchen-extensions-side-returns [R=301,L]
+RewriteRule ^services/single-storey-rear-extension-london/?$ /services/kitchen-extensions-side-returns [R=301,L]
+RewriteRule ^services/double-storey-extension-london/?$ /services/kitchen-extensions-side-returns [R=301,L]
+
+# Lofts -> Loft Page
+RewriteRule ^services/loft-conversion-london/?$ /services/loft-conversions-dormer-mansard [R=301,L]
+
+# Kitchens -> Bespoke Kitchens
+RewriteRule ^services/complete-kitchen-renovation-london/?$ /services/bespoke-kitchen-installation [R=301,L]
+
+# Restoration -> Period Restoration
+RewriteRule ^services/victorian-house-restoration-london/?$ /services/period-property-restoration [R=301,L]
+
+# Basements/Luxury -> Prime Location Hub
+RewriteRule ^services/basement-conversion-london/?$ /locations/kensington-mayfair-prime [R=301,L]
+
+# Structural -> Structural Page
+RewriteRule ^services/structural-alterations-london/?$ /services/structural-alterations-wall-removal [R=301,L]
+RewriteRule ^services/load-bearing-wall-removal-london/?$ /services/structural-alterations-wall-removal [R=301,L]
+
+# ==========================================
+# 3. REACT ROUTER SPA ROUTING
+# ==========================================
+# If the file exists, serve it. If not, serve index.html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+# Safety checks
+RewriteCond %{REQUEST_URI} !^/images/
+RewriteCond %{REQUEST_URI} !^/assets/
+RewriteCond %{REQUEST_URI} !\.xml$
+RewriteCond %{REQUEST_URI} !\.txt$
+RewriteCond %{REQUEST_URI} !\.ico$
+RewriteRule . /index.html [L]
+
+# ==========================================
+# 4. SECURITY HEADERS (Your Excellent Config)
+# ==========================================
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-XSS-Protection "1; mode=block"
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    Header always set Permissions-Policy "geolocation=(self), microphone=(), camera=()"
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+    <FilesMatch "\.(html|htm)$">
+        Header set X-Robots-Tag "index, follow"
+    </FilesMatch>
+</IfModule>
+
+# ==========================================
+# 5. COMPRESSION & CACHING (Your Excellent Config)
+# ==========================================
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/plain text/html text/xml text/css application/xml application/xhtml+xml application/rss+xml application/javascript application/json image/svg+xml
+</IfModule>
+
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType image/jpg "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType text/html "access plus 1 hour"
+    ExpiresByType application/xml "access plus 1 day"
+</IfModule>
+
+# ==========================================
+# 6. FILE SECURITY
+# ==========================================
+<FilesMatch "^(\.htaccess|\.env|\.git|\.DS_Store|wp-config\.php|php\.ini)">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+<FilesMatch "\.(bak|config|sql|log|sh|inc|swp|dist|old|original|save|~)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>

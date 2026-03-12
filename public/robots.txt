@@ -1,0 +1,43 @@
+# Live Better Life - Optimized for React/Next.js
+# Last Updated: Dec 16, 2025
+# https://livebetterlife.co.uk/robots.txt
+
+# ====================
+# Sitemap
+# ====================
+Sitemap: https://livebetterlife.co.uk/sitemap.xml
+
+# ====================
+# Global Rules
+# ====================
+User-agent: *
+Allow: /
+
+# Block technical/admin paths
+Disallow: /admin/
+Disallow: /private/
+Disallow: /api/       # Don't let Google index your API endpoints
+Disallow: /search/    # Don't index internal search results
+
+# ====================
+# Google Specific
+# ====================
+User-agent: Googlebot
+Allow: /
+# Ensure Google can render the React App by accessing all assets
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.json$
+
+# ====================
+# Ads & Tracking Cleanup
+# ====================
+# This tells Google to ignore tracking parameters but Index the page
+# This is much safer than "Disallow" for React apps
+Clean-param: utm_source&utm_medium&utm_campaign&utm_term&utm_content /
+Clean-param: ref /
+Clean-param: fbclid /
+Clean-param: gclid /
+
+# Host directive
+Host: livebetterlife.co.uk
