@@ -103,7 +103,7 @@ export const projects: Project[] = [
         '/images/projects/project2/progress/prgree8.jpeg',
       ],
       after: [
-        '/images/projects/project2/after/after1.mov',
+        '/images/projects/project2/after/after.mp4',
       ]
     },
     details: {
