@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { MapPin, CheckCircle, Star, ArrowRight, Clock, PoundSterling } from 'lucide-react';
+import { projects } from '../data/projects';
 
 const Portfolio = () => {
   const featuredProject = {
@@ -22,6 +23,9 @@ const Portfolio = () => {
     client: "Homeowners, West Hampstead"
   };
 
+  // Get project2 data for the video
+  const project2 = projects.find(p => p.id === 'brondesbury-flat');
+  
   const mediumProjects = [
     {
       address: "22 Davies Street, Mayfair W1K 3DE",
@@ -42,16 +46,17 @@ const Portfolio = () => {
       specialty: "High-end Central London specialist"
     },
     {
-      address: "Brondesbury Road, Brondesbury NW6",
+      address: project2?.location || "Brondesbury Road, Brondesbury NW6",
       type: "FULL FLAT RENOVATION",
-      description: "Complete kitchen transformation with custom cabinetry",
+      description: project2?.description || "Complete kitchen transformation with custom cabinetry",
       investment: "£65,000",
-      timeline: "8 weeks",
-      completed: "2023",
-      image: "/images/projects/project3/after/aft7.jpeg",
+      timeline: "4 months",
+      completed: project2?.year || "2023",
+      image: project2?.images.after[0] || "/images/projects/project3/after/aft7.jpeg",
+      isVideo: project2?.images.after[0]?.endsWith('.mp4'),
       scope: [
         "Custom cabinetry design and installation",
-        "Premium appliances integration",
+        "Premium appliances integration", 
         "Open-concept design maximizing space",
         "Natural light optimization",
         "Functional yet elegant cooking space",
