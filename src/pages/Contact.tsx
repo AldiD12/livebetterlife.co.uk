@@ -69,15 +69,8 @@ const ContactPage = () => {
     "mainEntity": {
       "@type": "LocalBusiness",
       "name": "Live Better Life",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Unit 1.04 The Light Box, 111 Power Road",
-        "addressLocality": "London",
-        "postalCode": "W4 5PY",
-        "addressCountry": "UK"
-      },
-      "telephone": "+44 20 3488 3491",
-      "email": "contact@livebetterlife.co.uk",
+      "telephone": "+44 7387 844751",
+      "email": "info@livebetterlife.co.uk",
       "openingHours": "Mo-Fr 08:00-18:00"
     }
   };
@@ -167,13 +160,13 @@ const ContactPage = () => {
               <div className="space-y-8">
                 <div className="bg-gray-50 p-6 border border-gray-200 rounded-lg">
                   <h2 className="text-2xl font-light tracking-[0.15em] text-gray-900 mb-6">
-                    OUR LOCATION
+                    OUR SERVICE AREA
                   </h2>
                   <div className="h-64 md:h-80 rounded-lg overflow-hidden">
                     <Suspense fallback={<div className="w-full h-full bg-gray-100 flex items-center justify-center">Loading map...</div>}>
-                      <LocationMap 
-                        position={[51.494513, -0.278985]} // Coordinates for Power Road, London
-                        popupText="Live Better Life - Home Renovation Specialists"
+                      <LocationMap
+                        position={[51.5468, -0.1907]} // Coordinates for West Hampstead, NW6
+                        popupText="Live Better Life - Serving NW London"
                       />
                     </Suspense>
                   </div>

@@ -165,12 +165,7 @@ const Footer = () => {
             {/* Center - Reviews & Credentials */}
             <div className="text-center">
               <div className="flex items-center justify-center gap-2 mb-2">
-                <div className="flex">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-3 h-3 fill-yellow-400 text-yellow-400" />
-                  ))}
-                </div>
-                <span className="text-xs text-white/70 font-light">4.8/5.0 (23 Google Reviews)</span>
+                <span className="text-xs text-white/70 font-light">Trusted by 127 Families Since 2010</span>
               </div>
               <div className="flex items-center justify-center gap-4 text-xs text-white/60 font-light">
                 <span>FMB Approved</span>

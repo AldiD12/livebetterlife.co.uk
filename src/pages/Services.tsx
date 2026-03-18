@@ -280,19 +280,7 @@ const ServicesPage = () => {
     "provider": {
       "@type": "LocalBusiness",
       "name": "Live Better Life",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Unit 1.04 The Light Box, 111 Power Road",
-        "addressLocality": "London",
-        "postalCode": "W4 5PY",
-        "addressCountry": "UK"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 51.4938,
-        "longitude": -0.2694
-      },
-      "telephone": "+442071234567",
+      "telephone": "+447387844751",
       "openingHours": "Mo-Fr 08:00-18:00"
     },
     "areaServed": [

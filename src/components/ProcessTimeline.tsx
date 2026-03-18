@@ -90,7 +90,7 @@ const ProcessTimeline = () => {
         "Building Control sign-off (if applicable)",
         "12-month warranty activated"
       ],
-      responseTime: "Average client satisfaction: 4.8★ / 5.0",
+      responseTime: "127 families served since 2010",
       guarantee: "1-month, 6-month & 12-month follow-ups included"
     }
   ];

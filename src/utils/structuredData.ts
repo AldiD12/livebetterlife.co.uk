@@ -28,14 +28,8 @@ export const localBusinessSchema = {
   "url": "https://livebetterlife.co.uk",
   "telephone": "+44 7387 844751", // FIXED: Your real number
   "priceRange": "£50000-£150000", // FIXED: Realistic range for renovations
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Unit 1.04 The Light Box, 111 Power Road",
-    "addressLocality": "London", // We keep the address for trust...
-    "postalCode": "W4 5PY",
-    "addressCountry": "GB"
-  },
-  // REMOVED: The "geo" coordinates for W4. We don't want to pin you there.
+  // Address removed - registered office is accountant's address, not operating location
+  // Physical address kept only in Privacy Policy as legally required
   "areaServed": [
     {
       "@type": "Place",

@@ -10,9 +10,9 @@ const Stats = () => {
       color: "text-blue-600"
     },
     {
-      number: "4.8★",
-      label: "Average Rating",
-      sublabel: "23 Google Reviews",
+      number: "100%",
+      label: "Planning Approval",
+      sublabel: "Success Rate",
       icon: Star,
       color: "text-yellow-500"
     },
