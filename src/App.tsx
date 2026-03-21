@@ -15,6 +15,7 @@ import ProjectDetail from './pages/ProjectDetail';
 import UnderConstruction from './pages/UnderConstruction';
 import BlogPage from './pages/Blog';
 import Privacy from './pages/Privacy';
+import NotFound from './pages/NotFound';
 import KitchenRenovationLondon from './pages/services/KitchenRenovationLondon';
 import BathroomRenovationLondon from './pages/services/BathroomRenovationLondon';
 import HomeExtensionLondon from './pages/services/HomeExtensionLondon';
@@ -156,6 +157,7 @@ const App = () => {
             <Route path="/estimate" element={<UnderConstruction />} />
             <Route path="/blog/*" element={<BlogPage />} />
             <Route path="/privacy" element={<Privacy />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
         <Footer />

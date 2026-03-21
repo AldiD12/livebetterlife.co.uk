@@ -3,19 +3,36 @@ RewriteEngine On
 Options -Indexes +FollowSymLinks
 
 # ==========================================
-# 1. FORCE HTTPS & NON-WWW
+# 1. FORCE HTTPS & NON-WWW (single redirect)
 # ==========================================
-RewriteCond %{HTTPS} off
-RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-
-RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
-RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+# Handles http→https AND www→non-www in one redirect (no double hop)
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} ^www\. [NC]
+RewriteRule ^(.*)$ https://livebetterlife.co.uk/$1 [R=301,L]
 
 # ==========================================
-# 2. SEO REDIRECTS (CRITICAL - MUST BE BEFORE REACT LOGIC)
+# 2. GHOST URL REDIRECTS
 # ==========================================
+# These URLs appear in Google's index but don't exist as routes.
+# Without redirects, they serve the empty SPA shell = soft 404s.
 
-# --- A. Portfolio Redirects (Your Existing Ones) ---
+# Old portfolio shorthand URLs → actual portfolio slugs
+RewriteRule ^portfolio/HA3/?$ /portfolio/ground-floor-renovation-kenton-harrow-ha3 [R=301,L]
+RewriteRule ^portfolio/NW9/?$ /portfolio/house-conversion-flats-kingsbury-nw9 [R=301,L]
+RewriteRule ^portfolio/W14/?$ /portfolio/luxury-renovation-russell-gardens-mews-kensington-w14 [R=301,L]
+RewriteRule ^portfolio/W1K/?$ /portfolio/luxury-office-renovation-mayfair-w1k [R=301,L]
+RewriteRule ^portfolio/NW6-Tennyson/?$ /portfolio/victorian-house-renovation-tennyson-road-nw6 [R=301,L]
+
+# Old page names → best matching current pages
+RewriteRule ^areas/?$ /services [R=301,L]
+RewriteRule ^faq/?$ / [R=301,L]
+RewriteRule ^about/?$ / [R=301,L]
+
+# Service URL variants that don't match current routes
+RewriteRule ^services/kitchen-renovation-london/?$ /services/complete-kitchen-renovation-london [R=301,L]
+RewriteRule ^services/home-extension-london/?$ /services/house-extensions-london [R=301,L]
+
+# Old portfolio redirects (keeping these - they map old names to new slugs)
 RewriteRule ^portfolio/kingsbury-conversion/?$ /portfolio/house-conversion-flats-kingsbury-nw9 [R=301,L]
 RewriteRule ^portfolio/brondesbury-flat/?$ /portfolio/victorian-flat-renovation-brondesbury-nw6 [R=301,L]
 RewriteRule ^portfolio/russell-gardens/?$ /portfolio/luxury-renovation-russell-gardens-mews-kensington-w14 [R=301,L]
@@ -23,42 +40,13 @@ RewriteRule ^portfolio/tennyson-road/?$ /portfolio/victorian-house-renovation-te
 RewriteRule ^portfolio/davies-street/?$ /portfolio/luxury-office-renovation-mayfair-w1k [R=301,L]
 RewriteRule ^portfolio/kenton-lane/?$ /portfolio/ground-floor-renovation-kenton-harrow-ha3 [R=301,L]
 
-# --- B. Service Page "Zombie" Redirects (NEW - DO NOT SKIP) ---
-# Redirecting generic "-london" pages to specific specialist pages to save SEO juice.
-
-# Renovations -> Victorian Page
-RewriteRule ^services/full-house-renovation-london/?$ /services/full-house-renovation-victorian-edwardian [R=301,L]
-RewriteRule ^services/whole-property-renovations-london/?$ /services/full-house-renovation-victorian-edwardian [R=301,L]
-
-# Extensions -> Kitchen/Side Returns Page
-RewriteRule ^services/house-extensions-london/?$ /services/kitchen-extensions-side-returns [R=301,L]
-RewriteRule ^services/kitchen-extension-london/?$ /services/kitchen-extensions-side-returns [R=301,L]
-RewriteRule ^services/single-storey-rear-extension-london/?$ /services/kitchen-extensions-side-returns [R=301,L]
-RewriteRule ^services/double-storey-extension-london/?$ /services/kitchen-extensions-side-returns [R=301,L]
-
-# Lofts -> Loft Page
-RewriteRule ^services/loft-conversion-london/?$ /services/loft-conversions-dormer-mansard [R=301,L]
-
-# Kitchens -> Bespoke Kitchens
-RewriteRule ^services/complete-kitchen-renovation-london/?$ /services/bespoke-kitchen-installation [R=301,L]
-
-# Restoration -> Period Restoration
-RewriteRule ^services/victorian-house-restoration-london/?$ /services/period-property-restoration [R=301,L]
-
-# Basements/Luxury -> Prime Location Hub
-RewriteRule ^services/basement-conversion-london/?$ /locations/kensington-mayfair-prime [R=301,L]
-
-# Structural -> Structural Page
-RewriteRule ^services/structural-alterations-london/?$ /services/structural-alterations-wall-removal [R=301,L]
-RewriteRule ^services/load-bearing-wall-removal-london/?$ /services/structural-alterations-wall-removal [R=301,L]
-
 # ==========================================
 # 3. REACT ROUTER SPA ROUTING
 # ==========================================
-# If the file exists, serve it. If not, serve index.html
+# If the file exists (including pre-rendered HTML), serve it directly.
+# Otherwise, serve index.html for client-side routing.
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-# Safety checks
 RewriteCond %{REQUEST_URI} !^/images/
 RewriteCond %{REQUEST_URI} !^/assets/
 RewriteCond %{REQUEST_URI} !\.xml$
@@ -67,7 +55,7 @@ RewriteCond %{REQUEST_URI} !\.ico$
 RewriteRule . /index.html [L]
 
 # ==========================================
-# 4. SECURITY HEADERS (Your Excellent Config)
+# 4. SECURITY HEADERS
 # ==========================================
 <IfModule mod_headers.c>
     Header always set X-Content-Type-Options "nosniff"
@@ -82,7 +70,7 @@ RewriteRule . /index.html [L]
 </IfModule>
 
 # ==========================================
-# 5. COMPRESSION & CACHING (Your Excellent Config)
+# 5. COMPRESSION & CACHING
 # ==========================================
 <IfModule mod_deflate.c>
     AddOutputFilterByType DEFLATE text/plain text/html text/xml text/css application/xml application/xhtml+xml application/rss+xml application/javascript application/json image/svg+xml

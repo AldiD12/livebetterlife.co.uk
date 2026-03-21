@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 
 const NotFound = () => {
   useEffect(() => {
-    // Set page title for 404 page
     document.title = '404 Page Not Found - Live Better Life';
   }, []);
 
@@ -19,13 +19,19 @@ const NotFound = () => {
 
   // Featured projects to recapture user interest
   const featuredProjects = [
-    { title: 'Kingsbury Road NW9', path: '/portfolio/NW9' },
-    { title: 'Brondsbury Road NW6', path: '/portfolio/NW6' },
-    { title: 'Rusell Garden Muse W14', path: '/portfolio/W14' }
+    { title: 'Kingsbury Road NW9', path: '/portfolio/house-conversion-flats-kingsbury-nw9' },
+    { title: 'Brondesbury Road NW6', path: '/portfolio/victorian-flat-renovation-brondesbury-nw6' },
+    { title: 'Russell Gardens Mews W14', path: '/portfolio/luxury-renovation-russell-gardens-mews-kensington-w14' }
   ];
 
   return (
     <div className="pt-32 pb-20 bg-white">
+      <SEO
+        title="Page Not Found"
+        description="The page you're looking for doesn't exist."
+        canonicalUrl="https://livebetterlife.co.uk"
+        noindex={true}
+      />
       <div className="max-w-4xl mx-auto px-6">
         <div className="text-center mb-12">
           <h1 className="text-6xl font-light text-gray-900 mb-4">404</h1>

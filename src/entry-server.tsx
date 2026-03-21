@@ -100,6 +100,7 @@ import ProjectDetail from './pages/ProjectDetail';
 import UnderConstruction from './pages/UnderConstruction';
 import BlogPage from './pages/Blog';
 import Privacy from './pages/Privacy';
+import NotFound from './pages/NotFound';
 import FAQSection from './components/FAQSection';
 import BlogPreview from './components/BlogPreview';
 import WhyRenovateNotMove from './components/WhyRenovateNotMove';
@@ -222,6 +223,7 @@ const AppContent = () => {
           <Route path="/estimate" element={<UnderConstruction />} />
           <Route path="/blog/*" element={<BlogPage />} />
           <Route path="/privacy" element={<Privacy />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
       <Footer />
