@@ -103,10 +103,205 @@ export const generateSitemap = (): string => {
       lastmod: currentDate,
       changefreq: 'weekly',
       priority: 0.8
-    }
+    },
 
-    // NOTE: All generic "-london" service pages have been REMOVED to eliminate keyword cannibalization
-    // The specific GBP-aligned pages above are now the sole authority pages
+    // Construction Company Services
+    {
+      loc: `${baseUrl}/services/house-extensions-london`,
+      lastmod: currentDate,
+      changefreq: 'monthly',
+      priority: 0.7
+    },
+    {
+      loc: `${baseUrl}/services/structural-alterations-london`,
+      lastmod: currentDate,
+      changefreq: 'monthly',
+      priority: 0.7
+    },
+    {
+      loc: `${baseUrl}/services/whole-property-renovations-london`,
+      lastmod: currentDate,
+      changefreq: 'monthly',
+      priority: 0.7
+    },
+    {
+      loc: `${baseUrl}/services/load-bearing-wall-removal-london`,
+      lastmod: currentDate,
+      changefreq: 'monthly',
+      priority: 0.7
+    },
+    {
+      loc: `${baseUrl}/services/basement-conversion-london`,
+      lastmod: currentDate,
+      changefreq: 'monthly',
+      priority: 0.7
+    },
+    {
+      loc: `${baseUrl}/services/garage-conversion-london`,
+      lastmod: currentDate,
+      changefreq: 'monthly',
+      priority: 0.7
+    },
+
+    // Home Builder Services
+    {
+      loc: `${baseUrl}/services/double-storey-extension-london`,
+      lastmod: currentDate,
+      changefreq: 'monthly',
+      priority: 0.7
+    },
+    {
+      loc: `${baseUrl}/services/loft-conversion-london`,
+      lastmod: currentDate,
+      changefreq: 'monthly',
+      priority: 0.7
+    },
+    {
+      loc: `${baseUrl}/services/full-house-renovation-london`,
+      lastmod: currentDate,
+      changefreq: 'monthly',
+      priority: 0.7
+    },
+    {
+      loc: `${baseUrl}/services/internal-wall-removal-london`,
+      lastmod: currentDate,
+      changefreq: 'monthly',
+      priority: 0.7
+    },
+    {
+      loc: `${baseUrl}/services/steel-beam-installation-london`,
+      lastmod: currentDate,
+      changefreq: 'monthly',
+      priority: 0.7
+    },
+    {
+      loc: `${baseUrl}/services/single-storey-rear-extension-london`,
+      lastmod: currentDate,
+      changefreq: 'monthly',
+      priority: 0.7
+    },
+
+    // Kitchen Renovator Services
+    {
+      loc: `${baseUrl}/services/complete-kitchen-renovation-london`,
+      lastmod: currentDate,
+      changefreq: 'monthly',
+      priority: 0.7
+    },
+    {
+      loc: `${baseUrl}/services/kitchen-extension-london`,
+      lastmod: currentDate,
+      changefreq: 'monthly',
+      priority: 0.7
+    },
+    {
+      loc: `${baseUrl}/services/kitchen-island-installation-london`,
+      lastmod: currentDate,
+      changefreq: 'monthly',
+      priority: 0.7
+    },
+    {
+      loc: `${baseUrl}/services/complete-kitchen-refit-extension-london`,
+      lastmod: currentDate,
+      changefreq: 'monthly',
+      priority: 0.7
+    },
+    {
+      loc: `${baseUrl}/services/premium-kitchen-surface-installation-london`,
+      lastmod: currentDate,
+      changefreq: 'monthly',
+      priority: 0.7
+    },
+    {
+      loc: `${baseUrl}/services/kitchen-layout-restructuring-london`,
+      lastmod: currentDate,
+      changefreq: 'monthly',
+      priority: 0.7
+    },
+
+    // Bathroom Renovator Services
+    {
+      loc: `${baseUrl}/services/complete-bathroom-renovation-london`,
+      lastmod: currentDate,
+      changefreq: 'monthly',
+      priority: 0.7
+    },
+    {
+      loc: `${baseUrl}/services/wet-room-conversion-london`,
+      lastmod: currentDate,
+      changefreq: 'monthly',
+      priority: 0.7
+    },
+    {
+      loc: `${baseUrl}/services/ensuite-bathroom-creation-london`,
+      lastmod: currentDate,
+      changefreq: 'monthly',
+      priority: 0.7
+    },
+    {
+      loc: `${baseUrl}/services/designer-wet-room-creation-london`,
+      lastmod: currentDate,
+      changefreq: 'monthly',
+      priority: 0.7
+    },
+    {
+      loc: `${baseUrl}/services/luxury-bathroom-renovation-london`,
+      lastmod: currentDate,
+      changefreq: 'monthly',
+      priority: 0.7
+    },
+    {
+      loc: `${baseUrl}/services/underfloor-heating-installation-london`,
+      lastmod: currentDate,
+      changefreq: 'monthly',
+      priority: 0.7
+    },
+
+    // Building Restoration Services
+    {
+      loc: `${baseUrl}/services/victorian-house-restoration-london`,
+      lastmod: currentDate,
+      changefreq: 'monthly',
+      priority: 0.7
+    },
+    {
+      loc: `${baseUrl}/services/period-property-renovation-london`,
+      lastmod: currentDate,
+      changefreq: 'monthly',
+      priority: 0.7
+    },
+    {
+      loc: `${baseUrl}/services/listed-building-restoration-london`,
+      lastmod: currentDate,
+      changefreq: 'monthly',
+      priority: 0.7
+    },
+    {
+      loc: `${baseUrl}/services/sash-window-restoration-london`,
+      lastmod: currentDate,
+      changefreq: 'monthly',
+      priority: 0.7
+    },
+    {
+      loc: `${baseUrl}/services/heritage-building-renovation-london`,
+      lastmod: currentDate,
+      changefreq: 'monthly',
+      priority: 0.7
+    },
+    {
+      loc: `${baseUrl}/services/traditional-building-repair-london`,
+      lastmod: currentDate,
+      changefreq: 'monthly',
+      priority: 0.7
+    },
+
+    // Other pages
+    {
+      loc: `${baseUrl}/privacy`,
+      lastmod: currentDate,
+      changefreq: 'yearly',
+      priority: 0.3
+    },
   ];
 
   // Add project pages (The "Proof" - High Priority for Long-Tail Rankings)
@@ -192,11 +387,11 @@ ${imageUrls.join('\n')}
 const generateSitemapFiles = () => {
   try {
     const sitemap = generateSitemap();
-    writeFileSync(join(process.cwd(), 'public/sitemap.xml'), sitemap);
+    writeFileSync(join(process.cwd(), 'dist/sitemap.xml'), sitemap);
     console.log('✅ Main sitemap generated successfully');
 
     const imageSitemap = generateImageSitemap();
-    writeFileSync(join(process.cwd(), 'public/sitemap-images.xml'), imageSitemap);
+    writeFileSync(join(process.cwd(), 'dist/sitemap-images.xml'), imageSitemap);
     console.log('✅ Image sitemap generated successfully');
 
   } catch (error) {

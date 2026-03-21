@@ -51,7 +51,7 @@ export const generateRSSFeed = () => {
     </rss>`;
 
   // Ensure the public directory exists
-  const publicDir = join(process.cwd(), 'public');
+  const publicDir = join(process.cwd(), 'dist');
   if (!existsSync(publicDir)) {
     mkdirSync(publicDir, { recursive: true });
   }
@@ -60,9 +60,7 @@ export const generateRSSFeed = () => {
   writeFileSync(join(publicDir, 'rss.xml'), rss);
 
   console.log('RSS feed generated successfully!');
+};
 
-  // Execute the function if this file is run directly
-  if (process.argv[1] === new URL(import.meta.url).pathname) {
-    generateRSSFeed();
-  }
-}; // Close the generateRSSFeed function
+// Execute the function when this file is run directly
+generateRSSFeed();
