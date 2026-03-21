@@ -109,7 +109,7 @@ const BuildingRenovationsLondon = () => {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="tel:+442081234567"
+                href="tel:+447387844751"
                 className="inline-flex items-center justify-center px-8 py-4 bg-white text-gray-900 rounded hover:bg-gray-100 transition-colors"
               >
                 <Phone className="w-5 h-5 mr-2" />

@@ -4,28 +4,25 @@ import { Star, Shield, Award, Users } from 'lucide-react';
 const TrustSignals = () => {
   const testimonials = [
     {
-      name: "Sarah & James Mitchell",
-      location: "Chiswick, W4",
-      project: "Full House Renovation - £120k",
+      name: "Sarah & James M.",
+      location: "West Hampstead, NW6",
+      project: "Full House Renovation",
       rating: 5,
       text: "Exceptional work on our Victorian house renovation. The team managed everything professionally and delivered exactly what we envisioned. Worth every penny.",
-      image: "/images/testimonials/sarah-james.jpg"
     },
     {
-      name: "David Thompson",
-      location: "Kilburn, NW6", 
-      project: "Kitchen Extension - £85k",
+      name: "David T.",
+      location: "Kilburn, NW6",
+      project: "Kitchen Extension",
       rating: 5,
       text: "Outstanding kitchen extension that transformed our home. The project management was flawless and they stayed within budget and timeline.",
-      image: "/images/testimonials/david.jpg"
     },
     {
-      name: "Emma Rodriguez",
-      location: "Kensal Green, NW10",
-      project: "Loft Conversion - £65k",
+      name: "Emma R.",
+      location: "Kingsbury, NW9",
+      project: "Loft Conversion",
       rating: 5,
       text: "Professional, reliable, and delivered exceptional quality. Our loft conversion exceeded expectations and added significant value to our property.",
-      image: "/images/testimonials/emma.jpg"
     }
   ];
 
@@ -37,10 +34,10 @@ const TrustSignals = () => {
   ];
 
   const stats = [
-    { number: "200+", label: "Projects Completed", icon: Award },
+    { number: "127", label: "Homes Transformed", icon: Award },
     { number: "15+", label: "Years Experience", icon: Shield },
-    { number: "98%", label: "Client Satisfaction", icon: Star },
-    { number: "£2.5M+", label: "Projects Delivered", icon: Users }
+    { number: "100%", label: "Planning Approval", icon: Star },
+    { number: "£5M", label: "Insurance Coverage", icon: Users }
   ];
 
   return (

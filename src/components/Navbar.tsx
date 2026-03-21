@@ -68,7 +68,7 @@ const Navbar = () => {
             
             {/* Phone Number */}
             <a 
-              href="tel:+442081234567" 
+              href="tel:+447387844751"
               className="flex items-center space-x-2 text-gray-900 hover:text-gray-700 transition-colors font-medium"
             >
               <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
@@ -77,7 +77,7 @@ const Navbar = () => {
               <span className="text-lg tracking-wide">+44 7387 844751</span>
             </a>
             
-            <Link to="/estimate" className="px-6 py-2 bg-gray-900 text-white text-sm tracking-wider hover:bg-gray-800 transition-all duration-300">Get Estimate</Link>
+            <Link to="/contact" className="px-6 py-2 bg-gray-900 text-white text-sm tracking-wider hover:bg-gray-800 transition-all duration-300">Free Consultation</Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -175,7 +175,7 @@ const Navbar = () => {
             
             {/* Phone Number - Mobile */}
             <a 
-              href="tel:+442081234567" 
+              href="tel:+447387844751"
               className="flex items-center space-x-2 px-3 py-2 text-gray-900 hover:text-gray-700 transition-colors font-medium border-t border-gray-100 mt-2 pt-3"
               onClick={() => setIsMobileMenuOpen(false)}
             >
@@ -186,11 +186,11 @@ const Navbar = () => {
             </a>
             
             <Link
-              to="/estimate"
+              to="/contact"
               className="block px-3 py-2 bg-gray-900 text-white text-sm tracking-wider hover:bg-gray-800 transition-all duration-300 mt-2"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              Get Estimate
+              Free Consultation
             </Link>
           </div>
         </div>

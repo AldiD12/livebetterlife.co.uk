@@ -4,23 +4,23 @@ const testimonials = [
   {
     id: 1,
     quote: "The attention to detail and craftsmanship exceeded our expectations. They transformed our space into something truly extraordinary.",
-    author: "Sarah & James Thompson",
-    project: "SW6-541 FULHAM ROAD",
-    image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c",
+    author: "Sarah & James T.",
+    project: "KINGSBURY ROAD, NW9",
+    image: "/images/projects/project1/after/kingsbury-road-nw9-flats-conversion-after-interior-1.jpeg",
   },
   {
     id: 2,
     quote: "Professional, innovative, and incredibly responsive throughout the entire process. The end result is exactly what we envisioned.",
-    author: "Michael Richardson",
-    project: "SW3-545 NEW KINGS ROAD",
-    image: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3",
+    author: "Michael R.",
+    project: "KENTON LANE, HA3",
+    image: "/images/projects/project3/after/aft1.jpeg",
   },
   {
     id: 3,
     quote: "Their expertise in both design and construction made the entire renovation process seamless. We couldn't be happier with our new home.",
-    author: "Emma & David Clarke",
-    project: "SW1P-547 PIMLICO",
-    image: "https://images.unsplash.com/photo-1600489000022-c2086d79f9d4",
+    author: "Emma & David C.",
+    project: "TENNYSON ROAD, NW6",
+    image: "/images/projects/project4/after/IMG_4515.jpg",
   }
 ];
 
