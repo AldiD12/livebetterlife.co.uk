@@ -6,8 +6,8 @@ const BuildingRenovationsLondon = () => {
   return (
     <>
       <SEO
-        title="Full House & Whole Property Renovations London | Live Better Life | Complete Property Transformation"
-        description="Professional full house and whole property renovation services in London. Complete property transformations, full renovations, and building refurbishments. Free consultation and quotes."
+        title="Full House Renovation London | Costs From £80k | Live Better Life"
+        description="Full house renovation in London from £80k-£400k. Complete property transformations including Victorian & Edwardian homes. House renovation costs London guide included. Free consultation."
         canonicalUrl="https://livebetterlife.co.uk/services/full-house-renovation-london"
       />
       

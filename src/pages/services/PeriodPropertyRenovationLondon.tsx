@@ -6,8 +6,8 @@ const PeriodPropertyRenovationLondon = () => {
   return (
     <>
       <SEO
-        title="Period Property Renovation London | Live Better Life | Historic Property Specialists"
-        description="Professional period property renovation services in London. Expert renovation of Georgian, Victorian, and Edwardian properties. Free consultation and quotes."
+        title="Period Property Renovation London | Victorian & Edwardian Specialists"
+        description="Expert period property renovation in London. Georgian, Victorian & Edwardian home restoration specialists. Conservation area approved. 15+ years experience. Free consultation & quote."
         canonicalUrl="https://livebetterlife.co.uk/services/period-property-renovation-london"
       />
       

@@ -68,8 +68,8 @@ const PortfolioPage = () => {
   return (
     <>
       <SEO 
-        title="Home Renovation Portfolio | Our Work in London"
-        description="Browse our portfolio of stunning home renovation projects across London. See before and after transformations of kitchens, bathrooms, and complete home renovations."
+        title="Renovation Portfolio London | Before & After Home Transformations"
+        description="Browse our London renovation portfolio: Victorian house renovations, kitchen extensions, loft conversions & bathroom refurbishments. Real before & after photos. 127+ homes transformed."
         canonicalUrl="https://livebetterlife.co.uk/portfolio"
         keywords="renovation portfolio, home renovation projects, kitchen remodeling examples, bathroom renovation gallery, london home renovation"
         schema={portfolioSchema}

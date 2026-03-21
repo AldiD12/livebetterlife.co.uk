@@ -6,8 +6,8 @@ const StructuralAlterationsLondon = () => {
   return (
     <>
       <SEO
-        title="Structural Alterations London | Live Better Life | Load Bearing Wall Removal"
-        description="Professional structural alterations in London. Load bearing wall removal, steel beam installation, and structural modifications. Free consultation and quotes."
+        title="Structural Alterations London | Wall Removal & Steel Beam Installation"
+        description="Structural alterations across North, West & South London. Load bearing wall removal, steel beam installation & open plan conversions. Structural engineer approved. Free survey & quote."
         canonicalUrl="https://livebetterlife.co.uk/services/structural-alterations-london"
       />
       

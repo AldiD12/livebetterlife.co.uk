@@ -148,8 +148,8 @@ import PeriodPropertyRestoration from './pages/services/PeriodPropertyRestoratio
 
 const AppContent = () => {
   const siteUrl = 'https://livebetterlife.co.uk';
-  const pageTitle = 'Construction Company London | Live Better Life | Expert Building Services';
-  const pageDescription = 'Leading construction company in London providing expert building services, renovations, extensions, and restoration. Serving all London boroughs with 15+ years experience.';
+  const pageTitle = 'Home Renovation London | House Extensions & Renovations | Live Better Life';
+  const pageDescription = 'Expert home renovation in London. House extensions, kitchen renovations, loft conversions, basement conversions & period property restoration. 127+ homes transformed. Free consultation.';
 
   return (
     <div className="flex flex-col min-h-screen">

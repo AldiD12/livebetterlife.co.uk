@@ -6,8 +6,8 @@ const BasementConversionLondon = () => {
   return (
     <>
       <SEO
-        title="Basement Conversion London | Live Better Life | Basement Extension & Conversion"
-        description="Professional basement conversion services in London. Transform your basement into valuable living space. Waterproofing, excavation, and complete conversions. Free consultation."
+        title="Basement Conversion London | From £50k | Expert Basement Extensions"
+        description="Professional basement conversion in London. Transform unused space into living areas, home offices & gyms. Full excavation, waterproofing & fit-out. Planning permission guidance. Free consultation."
         canonicalUrl="https://livebetterlife.co.uk/services/basement-conversion-london"
       />
       
