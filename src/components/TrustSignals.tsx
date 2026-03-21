@@ -27,10 +27,9 @@ const TrustSignals = () => {
   ];
 
   const certifications = [
-    { name: "Federation of Master Builders", logo: "/images/certifications/fmb.png" },
-    { name: "NHBC Registered", logo: "/images/certifications/nhbc.png" },
-    { name: "Checkatrade Approved", logo: "/images/certifications/checkatrade.png" },
-    { name: "Which? Trusted Trader", logo: "/images/certifications/which.png" }
+    { name: "NICEIC Certified", logo: "/images/certs/11.jpg" },
+    { name: "LPS Gas Safety", logo: "/images/certs/12.png" },
+    { name: "F-Gas Registered", logo: "/images/certs/13.jpeg" }
   ];
 
   const stats = [

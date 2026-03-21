@@ -14,7 +14,7 @@ const NotFound = () => {
     { title: 'Bathroom Remodels', path: '/services#bathroom-remodels' },
     { title: 'Our Portfolio', path: '/portfolio' },
     { title: 'Contact Us', path: '/contact' },
-    { title: 'Get an Estimate', path: '/estimate' }
+    { title: 'Free Consultation', path: '/contact' }
   ];
 
   // Featured projects to recapture user interest

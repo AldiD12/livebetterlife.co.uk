@@ -25,7 +25,7 @@ const services = [
     id: 'renovation-services',
     title: 'RENOVATION SERVICES',
     description: 'We specialize in complete renovation services, handling everything from start to finish. If you want to renovate your space, we ensure high-quality results at every step.',
-    image: '/images/services/image1.webp',
+    image: '/images/projects/project1/after/kingsbury-road-nw9-flats-conversion-after-exterior-1.jpeg',
     features: [
       'Full project management',
       'Sustainable solutions',
@@ -39,7 +39,7 @@ const services = [
     id: 'home-renovation',
     title: 'HOME RENOVATION & REMODELING',
     description: 'We improve and upgrade your home, increasing its value while enhancing comfort and functionality.',
-    image: '/images/services/image2.jpeg',
+    image: '/images/projects/project1/after/kingsbury-road-nw9-flats-conversion-after-interior-1.jpeg',
     features: [
       'Value enhancement',
       'Energy efficiency',
@@ -53,7 +53,7 @@ const services = [
     id: 'room-renovation',
     title: 'ROOM RENOVATION',
     description: 'Transform any room into a modern and functional space with our design and remodeling services. We specialize in creating new layouts, removing old fixtures, and installing fresh elements .',
-    image: '/images/services/image3.webp',
+    image: '/images/projects/project3/after/aft1.jpeg',
     features: [
       'Layout optimization',
       'Fixture modernization',
@@ -67,7 +67,7 @@ const services = [
     id: 'kitchen-renovation',
     title: 'KITCHEN RENOVATION',
     description: 'We specialize in stylish, functional kitchen makeovers using custom cabinetry, elegant lighting, and high-end finishes.',
-    image: '/images/services/image7.jpeg',
+    image: '/images/projects/project4/after/IMG_4515.jpg',
     features: [
       'Custom cabinetry',
       'High-end appliances',
@@ -81,7 +81,7 @@ const services = [
     id: 'bathroom-renovation',
     title: 'BATHROOM RENOVATION',
     description: 'Our bathroom remodel services focus on functionality and aesthetics, offering new fixtures, updated flooring, modern lighting, and efficient layouts. ',
-    image: '/images/services/image6.webp',
+    image: '/images/projects/project4/after/IMG_4413.jpg',
     features: [
       'Modern fixtures',
       'Luxury flooring',
@@ -98,69 +98,6 @@ const ServicesPage = () => {
     { name: 'NICEIC', logo: '/images/certs/11.jpg' },
     { name: 'LPS GAS SAFETY', logo: '/images/certs/12.png' },
     { name: 'F-GAS', logo: '/images/certs/13.jpeg' },
-  ];
-
-  const serviceCategories = [
-    {
-      title: "Full House Renovations",
-      services: [
-        "Victorian & Edwardian Home Renovation",
-        "Strip-Back-to-Brick Refurbishment",
-        "Open Plan Layout Reconfiguration",
-        "Structural Alterations & Steel Work",
-        "Period Property Modernisation"
-      ]
-    },
-    {
-      title: "Extensions & Conversions",
-      services: [
-        "Kitchen Extensions & Side Returns",
-        "Single & Double Storey Rear Extensions",
-        "Loft Conversions (Dormer & Mansard)",
-        "Basement Conversions",
-        "Flat Conversions (HMO & Self-Contained)"
-      ]
-    },
-    {
-      title: "Kitchen & Bathroom",
-      services: [
-        "Kitchen Remodeling & Installation",
-        "Bespoke Kitchen Cabinetry",
-        "Quartz & Stone Worktop Installation",
-        "Bathroom Renovation & Wet Rooms",
-        "Plumbing Relocation & First Fix"
-      ]
-    },
-    {
-      title: "Period Property Restoration",
-      services: [
-        "Victorian Facade & Brickwork Restoration",
-        "Sash Window Refurbishment",
-        "Cornice, Ceiling Rose & Fireplace Restoration",
-        "Conservation Area Compliance Work",
-        "Heritage Feature Preservation"
-      ]
-    },
-    {
-      title: "Building Services",
-      services: [
-        "Electrical Rewiring (NICEIC Certified)",
-        "Gas & Plumbing Systems",
-        "Underfloor Heating Installation",
-        "Damp Proofing & Tanking",
-        "Insulation & Energy Efficiency"
-      ]
-    },
-    {
-      title: "Planning & Project Management",
-      services: [
-        "Camden & Brent Planning Applications",
-        "Building Regulations & Compliance",
-        "Party Wall Agreements",
-        "Structural Engineering Coordination",
-        "Full Design & Build Service"
-      ]
-    }
   ];
 
   // FAQ Schema

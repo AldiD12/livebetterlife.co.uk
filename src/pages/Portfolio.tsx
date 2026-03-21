@@ -298,10 +298,10 @@ const PortfolioPage = () => {
                 Contact Us
               </Link>
               <Link
-                to="/estimate"
+                to="/contact"
                 className="py-4 px-8 border-2 border-gray-900 text-sm uppercase tracking-wider text-gray-900 hover:bg-gray-900 hover:text-white transition-all duration-300"
               >
-                Get Estimate
+                Free Consultation
               </Link>
             </div>
           </div>
