@@ -11,5 +11,14 @@ export default defineConfig({
   server: {
     port: 3000,
     open: true
-  }
+  },
+  ssr: {
+    // These packages use browser APIs and should not be bundled for SSR
+    noExternal: [
+      'react-helmet',
+      'lucide-react',
+      'react-icons',
+      'swiper',
+    ],
+  },
 });

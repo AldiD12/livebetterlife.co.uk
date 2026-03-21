@@ -5,7 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && npm run generate-rss && npm run generate-sitemap && npm run generate-sitemap-index",
+    "build": "vite build && npm run build:ssr && npm run prerender && npm run generate-rss && npm run generate-sitemap && npm run generate-sitemap-index",
+    "build:ssr": "vite build --ssr src/entry-server.tsx --outDir dist/server",
+    "prerender": "tsx scripts/prerender.ts",
     "preview": "vite preview",
     "lint": "eslint .",
     "generate-rss": "tsx src/utils/generateRSSFeed.ts",
