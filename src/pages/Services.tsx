@@ -102,141 +102,63 @@ const ServicesPage = () => {
 
   const serviceCategories = [
     {
-      title: "New Construction",
+      title: "Full House Renovations",
       services: [
-        "Custom Home Building",
-        "Multi-Unit Developments",
-        "Commercial Buildings",
-        "Eco-Friendly Construction",
-        "Steel Frame Construction",
-        "Foundation Work",
-        "Structural Engineering",
-        "Timber Frame Construction",
-        "Sustainable Building",
-        "Passive House Construction"
+        "Victorian & Edwardian Home Renovation",
+        "Strip-Back-to-Brick Refurbishment",
+        "Open Plan Layout Reconfiguration",
+        "Structural Alterations & Steel Work",
+        "Period Property Modernisation"
       ]
     },
     {
-      title: "Home Extensions",
+      title: "Extensions & Conversions",
       services: [
-        "Single Storey Extensions",
-        "Double Storey Extensions",
-        "Rear Extensions",
-        "Side Return Extensions",
-        "Wrap-around Extensions",
-        "Conservatories",
-        "Garden Rooms",
-        "Glass Extensions",
-        "Kitchen Extensions",
-        "Basement Extensions",
-        "Porch Additions"
+        "Kitchen Extensions & Side Returns",
+        "Single & Double Storey Rear Extensions",
+        "Loft Conversions (Dormer & Mansard)",
+        "Basement Conversions",
+        "Flat Conversions (HMO & Self-Contained)"
       ]
     },
     {
-      title: "Renovations & Remodeling",
+      title: "Kitchen & Bathroom",
       services: [
-        "Full House Renovation",
-        "Kitchen Remodeling",
-        "Bathroom Renovation",
-        "Waterproofing",
-        "Basement Conversion",
-        "Loft Conversion",
-        "Garage Conversion",
-        "Interior Reconfiguration",
-        "Period Property Restoration",
-        "Heritage Building Renovation",
-        "Commercial Renovation",
-        "Restaurant Renovation",
-        "Office Remodeling"
+        "Kitchen Remodeling & Installation",
+        "Bespoke Kitchen Cabinetry",
+        "Quartz & Stone Worktop Installation",
+        "Bathroom Renovation & Wet Rooms",
+        "Plumbing Relocation & First Fix"
       ]
     },
     {
-      title: "Interior Services",
+      title: "Period Property Restoration",
       services: [
-        "Custom Cabinetry",
-        "Flooring Installation",
-        "Wall & Ceiling Work",
-        "Interior Painting",
-        "Tiling Services",
-        "Built-in Storage",
-        "Staircase Renovation",
-        "Door Installation",
-        "Window Fitting",
-        "Plastering",
-        "Dry Lining",
-        "Acoustic Treatment",
-        "Interior Design",
-        "Lighting Design"
+        "Victorian Facade & Brickwork Restoration",
+        "Sash Window Refurbishment",
+        "Cornice, Ceiling Rose & Fireplace Restoration",
+        "Conservation Area Compliance Work",
+        "Heritage Feature Preservation"
       ]
     },
     {
-      title: "Exterior Services",
+      title: "Building Services",
       services: [
-        "Roofing & Guttering",
-        "External Wall Insulation",
-        "Facade Renovation",
-        "Window Installation",
-        "Driveway Construction",
-        "Patio & Decking",
-        "Landscaping",
-        "Outdoor Kitchens",
-        "Brick & Stone Work",
-        "Rendering",
-        "Cladding Installation",
-        "Roof Lanterns",
-        "Garage Construction",
-        "Garden Design"
+        "Electrical Rewiring (NICEIC Certified)",
+        "Gas & Plumbing Systems",
+        "Underfloor Heating Installation",
+        "Damp Proofing & Tanking",
+        "Insulation & Energy Efficiency"
       ]
     },
     {
-      title: "Specialist Services",
+      title: "Planning & Project Management",
       services: [
-        "Electrical Installations",
-        "Plumbing Systems",
-        "HVAC Installation",
-        "Smart Home Integration",
-        "Security Systems",
-        "Fire Safety Systems",
-        "Renewable Energy Solutions",
-        "Underfloor Heating",
-        "Air Conditioning",
-        "Solar Panel Installation",
-        "Home Automation",
-        "EV Charging Points",
-        "Energy Efficiency Upgrades"
-      ]
-    },
-    {
-      title: "Project Management",
-      services: [
-        "Construction Planning",
-        "Building Regulations",
-        "Planning Permission",
-        "Project Coordination",
-        "Budget Management",
-        "Timeline Planning",
-        "Quality Control",
-        "Safety Management",
-        "Contractor Coordination",
-        "Site Supervision",
-        "Documentation",
-        "Final Inspection"
-      ]
-    },
-    {
-      title: "Additional Services",
-      services: [
-        "Structural Surveys",
-        "Building Inspections",
-        "Energy Performance Certificates",
-        "Damp Proofing",
-        "Waste Management",
-        "Property Maintenance",
-        "Emergency Repairs",
-        "Insurance Work",
+        "Camden & Brent Planning Applications",
+        "Building Regulations & Compliance",
         "Party Wall Agreements",
-        "Conservation Work",
-        "Accessibility Modifications"
+        "Structural Engineering Coordination",
+        "Full Design & Build Service"
       ]
     }
   ];
@@ -248,26 +170,34 @@ const ServicesPage = () => {
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "How long does a typical kitchen renovation take?",
+        "name": "How much does a full house renovation cost in London?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "A standard kitchen renovation typically takes 4-6 weeks, depending on the scope of work and materials selected."
+          "text": "A full Victorian or Edwardian house renovation in NW London typically ranges from £60,000 to £150,000+, depending on the property size and scope of work. We provide free detailed quotes after a site visit."
         }
       },
       {
         "@type": "Question",
-        "name": "Do you provide free consultations?",
+        "name": "Do you handle Camden and Brent Council planning applications?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes, we offer free initial consultations to discuss your project requirements and provide a detailed quote."
+          "text": "Yes, we have 15+ years of experience navigating Camden and Brent planning processes, including conservation area applications, Article 4 Directions, and listed building consents. We have a 100% planning approval record."
         }
       },
       {
         "@type": "Question",
-        "name": "Are your workers certified and insured?",
+        "name": "How long does a loft conversion take in London?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Absolutely. All our team members are fully certified, and we carry comprehensive insurance for all our projects."
+          "text": "A standard dormer loft conversion takes 8-10 weeks, while a mansard conversion (common in NW6 conservation areas) takes 10-14 weeks. We handle all planning, party wall agreements, and Building Control sign-off."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are you insured and certified?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We carry £5M public liability insurance, are NICEIC certified for electrical work, F-Gas registered, and all our gas engineers are Gas Safe registered. We provide full warranties on all work."
         }
       }
     ]
