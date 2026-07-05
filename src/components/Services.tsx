@@ -1,306 +1,118 @@
 import { Link } from 'react-router-dom';
-import { CheckCircle, Star, ArrowRight, Lightbulb } from 'lucide-react';
+
+const CircleArrow = ({ className = '' }: { className?: string }) => (
+  <span className={`inline-flex items-center justify-center w-6 h-6 rounded-full border border-current ${className}`} aria-hidden="true">
+    <svg className="w-3 h-3" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="1.5">
+      <path d="M3 9L9 3M9 3H4M9 3V8" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  </span>
+);
+
+const services = [
+  {
+    title: 'Kitchen extensions & side returns',
+    copy: 'Side-return and rear extensions with open-plan knock-throughs, bespoke kitchens and bifold doors.',
+    image: '/images/projects/project6/after/kenton-lane-harrow-ha3-ground-floor-renovation-after-dining-room-open-plan-garden-doors-1.jpeg',
+    to: '/services/kitchen-extensions-side-returns',
+  },
+  {
+    title: 'Victorian & period restoration',
+    copy: 'Sensitive restoration of period features alongside modern comforts — conservation-area specialists.',
+    image: '/images/projects/project3/after/aftr2.jpeg',
+    to: '/services/period-property-restoration',
+  },
+  {
+    title: 'Loft conversions — dormer & mansard',
+    copy: 'Extra bedrooms, en-suites and home offices with new roof structure, dormers and rooflights.',
+    image: '/images/projects/project1/after/kingsbury-road-nw9-flats-conversion-after-bedroom-1.jpeg',
+    to: '/services/loft-conversions-dormer-mansard',
+  },
+  {
+    title: 'Structural alterations & steelwork',
+    copy: 'Load-bearing wall removal, steel beams and structural openings to create modern open-plan living.',
+    image: '/images/projects/project1/after/nw9-london-flat-conversion-after-living.jpeg',
+    to: '/services/structural-alterations-wall-removal',
+  },
+];
 
 const Services = () => {
-  const fullHouseIncludes = [
-    "Complete kitchen renovation/extension",
-    "All bathrooms renovated", 
-    "All bedrooms refreshed (paint, flooring, built-ins)",
-    "Living areas transformed",
-    "Structural alterations (if needed)",
-    "Planning permission & building control",
-    "Professional project management",
-    "One disruption, done in 8-12 weeks"
-  ];
-
-  const kitchenIncludes = [
-    "Kitchen design & planning",
-    "Structural work & extensions", 
-    "New cabinets & worktops",
-    "High-end appliances",
-    "Plumbing & electrical",
-    "Flooring & lighting",
-    "Planning permission & building control"
-  ];
-
-  const victorianIncludes = [
-    "Period feature restoration (cornicing, fireplaces, sash windows)",
-    "Structural repairs (foundations, walls, roofs)",
-    "Modern kitchen & bathrooms", 
-    "Updated plumbing, electrical, heating",
-    "Conservation area compliance",
-    "Planning permission for listed buildings"
-  ];
-
   return (
-    <div id="services" className="py-20 bg-white sm:py-32">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
-        
-        {/* Section Heading */}
-        <div className="text-center mb-16 sm:mb-20">
-          <div className="inline-flex items-center gap-3 mb-6">
-            <div className="w-12 h-px bg-gray-300"></div>
-            <span className="text-sm tracking-[0.3em] text-gray-500 uppercase">Our Services</span>
-            <div className="w-12 h-px bg-gray-300"></div>
+    <section id="services" className="py-20 sm:py-28 bg-sand">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-10">
+        {/* Heading */}
+        <div className="max-w-3xl mb-14 sm:mb-16">
+          <div className="inline-flex items-center gap-3 mb-5">
+            <span className="w-8 h-px bg-brass" />
+            <span className="text-xs font-medium uppercase tracking-[0.18em] text-brass-deep">Our services</span>
           </div>
-          <h2 className="text-3xl font-light tracking-wide text-gray-900 font-serif mb-6 sm:text-4xl md:text-5xl lg:tracking-[0.2em]">
-            Our Renovation Services
+          <h2 className="font-display font-semibold text-ink text-3xl sm:text-4xl lg:text-5xl leading-tight mb-5">
+            Complete design &amp; build, under one roof
           </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed font-light sm:text-xl">
-            Complete home transformations across West Hampstead, Brondesbury, Kingsbury & Harrow
+          <p className="text-lg text-stone leading-relaxed">
+            Full home transformations across West Hampstead, Brondesbury, Kingsbury and Harrow — one team,
+            one project manager, from first drawing to final finish.
           </p>
         </div>
 
-        <div className="space-y-16">
-          
-          {/* SERVICE CARD 1 - FULL HOUSE (LARGEST/FEATURED) */}
-          <div className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 border-2 border-gray-200 shadow-lg sm:p-12">
-            <div className="grid lg:grid-cols-2 gap-12 items-start">
-              
-              <div>
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">
-                    MOST POPULAR
-                  </div>
-                </div>
-                
-                <h3 className="text-3xl font-light text-gray-900 font-serif mb-4 sm:text-4xl">
-                  Full House Renovation (General Contracting)
-                </h3>
-                
-                <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                  Complete project management from start to finish. We handle the electrics, plumbing, structural steel, and high-end finishing. Transform your entire Victorian or Edwardian home in one coordinated project.
-                </p>
-                
-                <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-6">
-                  <p className="text-blue-800 font-medium">
-                    80% of our clients choose this over single-room renovations once they see the value.
-                  </p>
-                </div>
-
-                {/* What's Included */}
-                <h4 className="text-xl font-medium text-gray-900 mb-4">What's included:</h4>
-                <div className="grid sm:grid-cols-2 gap-2 mb-8">
-                  {fullHouseIncludes.map((item, index) => (
-                    <div key={index} className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
-                      <span className="text-sm text-gray-700">{item}</span>
-                    </div>
-                  ))}
-                </div>
-
-                {/* Pricing & Timeline */}
-                <div className="grid sm:grid-cols-3 gap-6 mb-8 p-6 bg-white rounded-xl border border-gray-200">
-                  <div>
-                    <div className="text-sm text-gray-500 mb-1">Investment:</div>
-                    <div className="text-xl font-bold text-gray-900">£50,000-£150,000</div>
-                  </div>
-                  <div>
-                    <div className="text-sm text-gray-500 mb-1">Timeline:</div>
-                    <div className="text-xl font-bold text-gray-900">8-12 weeks</div>
-                  </div>
-                  <div>
-                    <div className="text-sm text-gray-500 mb-1">Average:</div>
-                    <div className="text-xl font-bold text-green-600">£75,000</div>
-                  </div>
-                </div>
-
-                <div className="space-y-3 mb-8">
-                  <div><span className="font-medium">Popular in:</span> West Hampstead, Brondesbury, Kingsbury, Harrow</div>
-                  <div><span className="font-medium">Recent project:</span> Tennyson Road, West Hampstead NW6 - £85,000, 10 weeks</div>
-                </div>
-
-                {/* Testimonial */}
-                <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 mb-8">
-                  <div className="flex items-center gap-1 mb-2">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                    ))}
-                  </div>
-                  <p className="text-gray-700 italic mb-2">
-                    "We called about a kitchen. They showed us why the full house made sense. Best decision ever."
-                  </p>
-                  <p className="text-sm text-gray-600">- Homeowners, West Hampstead</p>
-                </div>
-
-                {/* CTAs */}
-                <div className="flex flex-col gap-4 sm:flex-row">
-                  <Link 
-                    to="/portfolio"
-                    className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-gray-900 text-white text-sm tracking-wider uppercase font-medium transition-all duration-500 hover:bg-gray-800 rounded-lg"
-                  >
-                    View Full House Projects
-                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-                  </Link>
-                  <Link 
-                    to="/contact"
-                    className="group inline-flex items-center justify-center gap-2 px-8 py-4 border border-gray-900 text-gray-900 text-sm tracking-wider uppercase font-medium transition-all duration-500 hover:bg-gray-900 hover:text-white rounded-lg"
-                  >
-                    Book Free Consultation
-                  </Link>
-                </div>
-              </div>
-
-              {/* Image */}
-              <div className="relative">
-                <div className="aspect-[4/3] bg-gray-100 rounded-xl overflow-hidden">
-                  <img 
-                    src="/images/projects/project1/after/nw9-london-flat-conversion-after-living.jpeg" 
-                    alt="Full House Renovation"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* SERVICE CARDS 2-3 (MEDIUM) */}
-          <div className="grid lg:grid-cols-2 gap-8">
-            
-            {/* Kitchen Renovation */}
-            <div className="bg-white rounded-xl p-8 border border-gray-200 shadow-sm">
-              <h3 className="text-2xl font-light text-gray-900 font-serif mb-4">
-                Kitchen Renovation & Remodeling
-              </h3>
-              
-              <p className="text-gray-600 mb-6 leading-relaxed">
-                Bespoke kitchen extensions and full remodeling services. From side-return extensions in Victorian terraces to open-plan knock-throughs.
-              </p>
-
-              <div className="bg-orange-50 border border-orange-200 rounded-lg p-4 mb-6">
-                <div className="flex items-start gap-2">
-                  <Lightbulb className="w-5 h-5 text-orange-600 mt-0.5 flex-shrink-0" />
-                  <p className="text-orange-800 text-sm">
-                    Most clients upgrade to full house renovation when they see it's only £40K more for the entire home.
-                  </p>
-                </div>
-              </div>
-
-              <h4 className="font-medium text-gray-900 mb-3">What's included:</h4>
-              <div className="space-y-2 mb-6">
-                {kitchenIncludes.map((item, index) => (
-                  <div key={index} className="flex items-start gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
-                    <span className="text-sm text-gray-700">{item}</span>
-                  </div>
-                ))}
-              </div>
-
-              <div className="space-y-3 mb-6 p-4 bg-gray-50 rounded-lg">
-                <div><span className="font-medium">Investment:</span></div>
-                <div className="text-sm">- Standalone kitchen: £25,000-£60,000</div>
-                <div className="text-sm">- As part of full house: £35,000-£50,000</div>
-                <div><span className="font-medium">Timeline:</span> 4-8 weeks (standalone)</div>
-                <div><span className="font-medium">Popular in:</span> West Hampstead, Kensington, Harrow</div>
-              </div>
-
-              <div className="bg-blue-50 border border-blue-200 rounded-lg p-3 mb-6">
-                <p className="text-blue-800 text-sm font-medium">
-                  💡 80% of kitchen inquiries become full house renovations - see both options
-                </p>
-              </div>
-
-              <div className="flex flex-col gap-3">
-                <Link 
-                  to="/services/kitchen-extensions-side-returns"
-                  className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-gray-900 text-white text-sm tracking-wider uppercase font-medium transition-all duration-500 hover:bg-gray-800 rounded-lg"
-                >
-                  View Kitchen Projects
-                </Link>
-                <Link 
-                  to="/contact"
-                  className="inline-flex items-center justify-center gap-2 px-6 py-3 border border-gray-900 text-gray-900 text-sm tracking-wider uppercase font-medium transition-all duration-500 hover:bg-gray-900 hover:text-white rounded-lg"
-                >
-                  Get Kitchen Quote
-                </Link>
-              </div>
-            </div>
-
-            {/* Victorian & Edwardian Restoration */}
-            <div className="bg-white rounded-xl p-8 border border-gray-200 shadow-sm">
-              <h3 className="text-2xl font-light text-gray-900 font-serif mb-4">
-                Victorian & Edwardian Restoration
-              </h3>
-              
-              <p className="text-gray-600 mb-6 leading-relaxed">
-                Period property specialists. We preserve original character while adding modern amenities. Expert in conservation areas and listed buildings.
-              </p>
-
-              <h4 className="font-medium text-gray-900 mb-3">What's included:</h4>
-              <div className="space-y-2 mb-6">
-                {victorianIncludes.map((item, index) => (
-                  <div key={index} className="flex items-start gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
-                    <span className="text-sm text-gray-700">{item}</span>
-                  </div>
-                ))}
-              </div>
-
-              <div className="space-y-3 mb-6 p-4 bg-gray-50 rounded-lg">
-                <div><span className="font-medium">Investment:</span> £60,000-£120,000</div>
-                <div><span className="font-medium">Timeline:</span> 10-14 weeks</div>
-                <div><span className="font-medium">Popular in:</span> West Hampstead, Brondesbury, Kensington</div>
-                <div><span className="font-medium">Recent restoration:</span> Brondesbury Road NW6 - Victorian terraced house</div>
-                <div className="text-sm text-gray-600">Camden Council conservation area specialists</div>
-              </div>
-
-              <div className="flex flex-col gap-3">
-                <Link 
-                  to="/services/period-property-restoration"
-                  className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-gray-900 text-white text-sm tracking-wider uppercase font-medium transition-all duration-500 hover:bg-gray-800 rounded-lg"
-                >
-                  View Victorian Projects
-                </Link>
-                <Link 
-                  to="/contact"
-                  className="inline-flex items-center justify-center gap-2 px-6 py-3 border border-gray-900 text-gray-900 text-sm tracking-wider uppercase font-medium transition-all duration-500 hover:bg-gray-900 hover:text-white rounded-lg"
-                >
-                  Book Heritage Consultation
-                </Link>
-              </div>
-            </div>
-          </div>
-
-          {/* SERVICE CARDS 4-5 (SMALLER) */}
-          <div className="grid md:grid-cols-2 gap-8">
-            
-            {/* Loft Conversions */}
-            <div className="bg-white rounded-xl p-6 border border-gray-200">
-              <h3 className="text-xl font-medium text-gray-900 mb-3">Loft Conversions</h3>
-              <p className="text-gray-600 mb-4">Extra bedroom, bathroom, or home office. Building control approval included.</p>
-              <div className="space-y-2 mb-4 text-sm">
-                <div><span className="font-medium">Investment:</span> £40,000-£80,000</div>
-                <div><span className="font-medium">Timeline:</span> 8-10 weeks</div>
-                <div><span className="font-medium">Popular in:</span> West Hampstead, Kingsbury, Harrow</div>
-              </div>
-              <Link 
-                to="/services/loft-conversions-dormer-mansard"
-                className="inline-flex items-center gap-2 text-gray-900 hover:text-gray-600 transition-colors"
-              >
-                View Loft Projects <ArrowRight className="w-4 h-4" />
+        {/* Featured: Full house */}
+        <div className="rounded-card bg-ivory shadow-card overflow-hidden grid lg:grid-cols-2 mb-10">
+          <div className="order-2 lg:order-1 p-8 sm:p-12 flex flex-col justify-center">
+            <span className="inline-flex items-center gap-2 self-start bg-brass-tint text-brass-deep text-xs font-medium uppercase tracking-[0.15em] px-3 py-1.5 rounded-full mb-5">
+              Most popular
+            </span>
+            <h3 className="font-display font-semibold text-ink text-2xl sm:text-3xl mb-4">
+              Full house renovation
+            </h3>
+            <p className="text-stone leading-relaxed mb-8">
+              Complete project management from start to finish — electrics, plumbing, structural steel and
+              high-end finishing. Transform your entire Victorian or Edwardian home in one coordinated project,
+              typically in 8–12 weeks.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link to="/services/full-house-renovation-victorian-edwardian" className="group inline-flex items-center justify-center gap-3 pl-7 pr-3 py-3.5 bg-ink text-cream rounded-full font-medium hover:bg-ink-soft transition-colors">
+                Explore full renovations
+                <CircleArrow className="text-brass group-hover:rotate-45 transition-transform duration-300" />
+              </Link>
+              <Link to="/contact" className="inline-flex items-center justify-center px-7 py-3.5 border border-ink/25 text-ink rounded-full font-medium hover:bg-ink hover:text-cream transition-colors">
+                Book a consultation
               </Link>
             </div>
-
-            {/* Bathroom Renovations */}
-            <div className="bg-white rounded-xl p-6 border border-gray-200">
-              <h3 className="text-xl font-medium text-gray-900 mb-3">Bathroom Renovations</h3>
-              <p className="text-gray-600 mb-4">Luxury bathroom transformations. Walk-in showers, modern fixtures, elegant tiling.</p>
-              <div className="space-y-2 mb-4 text-sm">
-                <div><span className="font-medium">Investment:</span> £12,000-£35,000</div>
-                <div><span className="font-medium">Timeline:</span> 2-4 weeks</div>
-                <div className="text-blue-600">Note: Often included in full house renovations</div>
-              </div>
-              <Link 
-                to="/portfolio"
-                className="inline-flex items-center gap-2 text-gray-900 hover:text-gray-600 transition-colors"
-              >
-                View Bathroom Projects <ArrowRight className="w-4 h-4" />
-              </Link>
-            </div>
+          </div>
+          <div className="order-1 lg:order-2 min-h-[280px] lg:min-h-full overflow-hidden">
+            <img
+              src="/images/projects/project6/after/kenton-lane-harrow-ha3-ground-floor-renovation-after-living-room-custom-entertainment-unit-led-lighting-1.jpeg"
+              alt="Full house renovation — open-plan living room in Harrow HA3"
+              className="w-full h-full object-cover"
+              loading="lazy"
+            />
           </div>
         </div>
+
+        {/* Service grid */}
+        <div className="grid sm:grid-cols-2 gap-8">
+          {services.map((s) => (
+            <Link key={s.title} to={s.to} className="group block rounded-card bg-ivory shadow-card overflow-hidden">
+              <div className="overflow-hidden">
+                <img
+                  src={s.image}
+                  alt={s.title}
+                  className="w-full aspect-[16/10] object-cover transition-transform duration-700 group-hover:scale-105"
+                  loading="lazy"
+                />
+              </div>
+              <div className="p-7">
+                <h3 className="font-display text-xl text-ink leading-snug mb-3">{s.title}</h3>
+                <p className="text-stone leading-relaxed mb-5">{s.copy}</p>
+                <span className="inline-flex items-center gap-2 text-sm font-medium text-ink/70 group-hover:text-ink transition-colors">
+                  Learn more
+                  <CircleArrow className="text-brass group-hover:rotate-45 transition-transform duration-300" />
+                </span>
+              </div>
+            </Link>
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -1,236 +1,130 @@
 import { Link } from 'react-router-dom';
-import { MapPin, CheckCircle, ArrowRight, X } from 'lucide-react';
+import { CheckCircle, X } from 'lucide-react';
+
+const CircleArrow = ({ className = '' }: { className?: string }) => (
+  <span className={`inline-flex items-center justify-center w-6 h-6 rounded-full border border-current ${className}`} aria-hidden="true">
+    <svg className="w-3 h-3" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="1.5">
+      <path d="M3 9L9 3M9 3H4M9 3V8" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  </span>
+);
 
 const WhyRenovateNotMove = () => {
-  const kitchenOnlyItems = [
-    { item: "New kitchen", included: true },
-    { item: "Rest of house still dated", included: false },
-    { item: "Bathrooms need work in 2 years (£25K more)", included: false },
-    { item: "Bedrooms need work in 4 years (£15K more)", included: false },
-    { item: "3 separate disruptions over 5 years", included: false }
+  const kitchenOnly = [
+    { item: 'New kitchen layout & fixtures', included: true },
+    { item: 'Rest of house remains dated', included: false },
+    { item: 'Bathrooms still require work later', included: false },
+    { item: 'Bedrooms require work later', included: false },
+    { item: 'Multiple disruptions over several years', included: false },
   ];
-
-  const fullHouseItems = [
-    { item: "New kitchen", included: true },
-    { item: "2 new bathrooms", included: true },
-    { item: "All bedrooms refreshed", included: true },
-    { item: "Living areas transformed", included: true },
-    { item: "Everything done at once", included: true },
-    { item: "One disruption, 10 weeks", included: true },
-    { item: "Better planning & design", included: true }
+  const fullHouse = [
+    'New kitchen layout & fixtures',
+    'Modernised bathroom suites',
+    'Refreshed bedroom spaces',
+    'Transformed living areas',
+    'Coordinated architectural flow',
+    'Single combined disruption',
+    'Optimised project planning',
   ];
-
   const movingCosts = [
-    "Estate agent fees: £15,000-£25,000",
-    "Stamp duty: £30,000-£60,000", 
-    "Moving costs: £5,000-£10,000",
-    "Emotional stress: Priceless"
+    'Estate agent listing commissions',
+    'Stamp duty government taxes',
+    'Removal vans & storage fees',
+    'Solicitor & legal paperwork fees',
+    'Emotional stress: priceless',
   ];
-
-  const renovationBenefits = [
-    "Stay in the area your kids know",
-    "Keep your local schools and friends",
-    "Avoid moving stress", 
-    "Get exactly the home you want",
-    "Increase property value by £100K-£200K"
-  ];
-
-  const recentProjects = [
-    "Tennyson Road, West Hampstead NW6",
-    "Brondesbury Road, Brondesbury NW6",
-    "Russell Gardens Mews, Kensington W14",
-    "Davies Street, Mayfair W1K", 
-    "Kingsbury Road, Kingsbury NW9",
-    "Kenton Lane, Harrow HA3"
+  const benefits = [
+    'Stay in the neighborhood your family loves',
+    'Keep your local schools and communities',
+    'Avoid the stress of house hunting',
+    'Customise every room to your exact lifestyle',
+    'Substantially increase property market value',
   ];
 
   return (
-    <section className="py-20 bg-gray-50 sm:py-32">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
-        
-        {/* Section Heading */}
-        <div className="text-center mb-16 sm:mb-20">
-          <div className="inline-flex items-center gap-3 mb-6">
-            <div className="w-12 h-px bg-gray-300"></div>
-            <span className="text-sm tracking-[0.3em] text-gray-500 uppercase">Our Expertise</span>
-            <div className="w-12 h-px bg-gray-300"></div>
+    <section className="py-20 sm:py-28 bg-cream">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-10">
+        {/* Heading */}
+        <div className="max-w-3xl mb-14 sm:mb-16">
+          <div className="inline-flex items-center gap-3 mb-5">
+            <span className="w-8 h-px bg-brass" />
+            <span className="text-xs font-medium uppercase tracking-[0.18em] text-brass-deep">Our approach</span>
           </div>
-          <h2 className="text-3xl font-light tracking-wide text-gray-900 font-serif mb-8 sm:text-4xl md:text-5xl lg:tracking-[0.2em]">
-            Full House Renovation Specialists Since 2010
+          <h2 className="font-display font-semibold text-ink text-3xl sm:text-4xl lg:text-5xl leading-tight mb-5">
+            Don't move. Transform the home you already love.
           </h2>
-          
-          {/* Main Intro Paragraph */}
-          <div className="max-w-4xl mx-auto mb-16">
-            <p className="text-lg text-gray-600 leading-relaxed font-light mb-4 sm:text-xl">
-              We transform entire homes across North West London - not just individual rooms.
-            </p>
-            <p className="text-lg text-gray-600 leading-relaxed font-light sm:text-xl">
-              While many homeowners initially contact us about kitchen renovations or extensions, 80% choose to upgrade to complete house transformations once they understand the value.
-            </p>
-          </div>
+          <p className="text-lg text-stone leading-relaxed">
+            We specialise in whole-home transformations across North West London. Instead of paying massive overheads
+            to move, our clients prefer customising their current spaces to build their dream homes.
+          </p>
         </div>
 
-        {/* Two Column Comparison */}
-        <div className="grid md:grid-cols-2 gap-8 mb-20">
-          
-          {/* Column 1 - Kitchen Only */}
-          <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-200 sm:p-8">
-            <div className="text-center mb-6">
-              <h3 className="text-2xl font-medium text-gray-900 mb-2">Renovate Just Kitchen</h3>
-              <div className="text-3xl font-bold text-red-600">Kitchen Only: £35,000</div>
-            </div>
-            
-            <div className="space-y-4">
-              {kitchenOnlyItems.map((item, index) => (
-                <div key={index} className="flex items-start gap-3">
-                  {item.included ? (
-                    <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
-                  ) : (
-                    <X className="w-5 h-5 text-red-500 mt-0.5 flex-shrink-0" />
-                  )}
-                  <span className={`text-sm ${item.included ? 'text-gray-700' : 'text-red-600'}`}>
-                    {item.item}
-                  </span>
+        {/* Comparison */}
+        <div className="grid md:grid-cols-2 gap-8 mb-16">
+          <div className="bg-ivory rounded-card shadow-card border border-line p-8">
+            <h3 className="font-display text-2xl text-ink mb-1">Renovate room-by-room</h3>
+            <div className="text-stone mb-6">Fractional phases</div>
+            <div className="space-y-3">
+              {kitchenOnly.map((k) => (
+                <div key={k.item} className="flex items-start gap-3">
+                  {k.included ? <CheckCircle className="w-5 h-5 text-brass mt-0.5 flex-shrink-0" /> : <X className="w-5 h-5 text-stone/50 mt-0.5 flex-shrink-0" />}
+                  <span className={k.included ? 'text-ink' : 'text-stone'}>{k.item}</span>
                 </div>
               ))}
             </div>
-            
-            <div className="mt-6 pt-6 border-t border-gray-200">
-              <div className="text-lg font-semibold text-red-600">
-                Total: £75,000 spent gradually
-              </div>
-            </div>
+            <div className="mt-6 pt-6 border-t border-line font-display text-lg text-ink font-semibold">Total: Higher costs over time</div>
           </div>
 
-          {/* Column 2 - Full House */}
-          <div className="bg-green-50 rounded-xl p-6 shadow-sm border border-green-200 sm:p-8">
-            <div className="text-center mb-6">
-              <h3 className="text-2xl font-medium text-gray-900 mb-2">Renovate Entire Home</h3>
-              <div className="text-3xl font-bold text-green-600">Full House: £75,000</div>
-            </div>
-            
-            <div className="space-y-4">
-              {fullHouseItems.map((item, index) => (
-                <div key={index} className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
-                  <span className="text-sm text-gray-700">{item.item}</span>
+          <div className="bg-ink text-cream rounded-card shadow-card p-8">
+            <h3 className="font-display text-2xl text-cream mb-1">Renovate the entire home</h3>
+            <div className="text-brass mb-6">All-in-one package</div>
+            <div className="space-y-3">
+              {fullHouse.map((f) => (
+                <div key={f} className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-brass mt-0.5 flex-shrink-0" />
+                  <span className="text-cream/90">{f}</span>
                 </div>
               ))}
             </div>
-            
-            <div className="mt-6 pt-6 border-t border-green-200">
-              <div className="text-lg font-semibold text-green-600">
-                Total: £75,000 spent once
-              </div>
-            </div>
+            <div className="mt-6 pt-6 border-t border-cream/15 font-display text-lg text-brass font-semibold">Total: Optimized, single investment</div>
           </div>
         </div>
 
-        {/* Why Families Choose Full House Renovations */}
-        <div className="mb-20">
-          <h3 className="text-2xl font-light text-gray-900 font-serif mb-8 text-center sm:text-3xl lg:text-4xl">
-            Why Families Choose Full House Renovations
-          </h3>
-          
-          <div className="max-w-4xl mx-auto mb-12">
-            <p className="text-lg text-gray-600 leading-relaxed font-light text-center sm:text-xl">
-              You love your neighborhood in West Hampstead, Brondesbury, or Kingsbury. You just don't love your outdated home.
-            </p>
-          </div>
-
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
-            
-            {/* Moving Costs */}
-            <div>
-              <h4 className="text-xl font-medium text-gray-900 mb-6 sm:text-2xl">
-                Moving in North West London costs:
-              </h4>
-              <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-200 mb-6 sm:p-8">
-                <div className="space-y-3">
-                  {movingCosts.map((cost, index) => (
-                    <div key={index} className="flex items-center gap-3">
-                      <div className="w-2 h-2 bg-red-500 rounded-full flex-shrink-0"></div>
-                      <span className="text-gray-700">{cost}</span>
-                    </div>
-                  ))}
+        {/* Move vs renovate */}
+        <div className="grid lg:grid-cols-2 gap-8 mb-16">
+          <div className="bg-ivory rounded-card shadow-card border border-line p-8">
+            <h4 className="font-display text-xl text-ink mb-5">Moving in London carries massive lost costs</h4>
+            <div className="space-y-3">
+              {movingCosts.map((c) => (
+                <div key={c} className="flex items-center gap-3 text-stone">
+                  <span className="w-1.5 h-1.5 rounded-full bg-brass flex-shrink-0" /> {c}
                 </div>
-                <div className="mt-6 pt-6 border-t border-gray-200">
-                  <div className="text-xl font-semibold text-red-600">
-                    Total: £50,000-£95,000 just to move
-                  </div>
-                </div>
-              </div>
+              ))}
             </div>
-
-            {/* Renovation Benefits */}
-            <div>
-              <h4 className="text-xl font-medium text-gray-900 mb-6 sm:text-2xl">
-                OR transform your existing home for £50,000-£150,000 and:
-              </h4>
-              <div className="bg-green-50 rounded-xl p-6 border border-green-200 sm:p-8">
-                <div className="space-y-3">
-                  {renovationBenefits.map((benefit, index) => (
-                    <div key={index} className="flex items-start gap-3">
-                      <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
-                      <span className="text-green-700 font-light">{benefit}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
+            <div className="mt-6 pt-6 border-t border-line font-display text-lg text-ink font-semibold">Thousands spent purely on fees</div>
           </div>
-        </div>
-
-        {/* Map and Projects */}
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 mb-20">
-          
-          {/* Map Placeholder */}
-          <div>
-            <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-200 sm:p-8">
-              <div className="aspect-[4/3] bg-gray-100 rounded-lg flex items-center justify-center mb-6">
-                <div className="text-center">
-                  <MapPin className="w-12 h-12 text-gray-400 mx-auto mb-2" />
-                  <p className="text-gray-500 text-sm font-medium">Project Locations Map</p>
-                  <p className="text-xs text-gray-400">NW London Coverage Area</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Recent Projects */}
-          <div>
-            <h4 className="text-xl font-medium text-gray-900 mb-6 sm:text-2xl">
-              Map showing project locations with pins:
-            </h4>
-            <div className="space-y-3 mb-8">
-              {recentProjects.map((project, index) => (
-                <div key={index} className="flex items-center gap-3 py-2">
-                  <MapPin className="w-4 h-4 text-gray-400 flex-shrink-0" />
-                  <span className="text-gray-700">{project}</span>
+          <div className="bg-ivory rounded-card shadow-card border border-line p-8">
+            <h4 className="font-display text-xl text-ink mb-5">Invest that budget back into your own space and</h4>
+            <div className="space-y-3">
+              {benefits.map((b) => (
+                <div key={b} className="flex items-start gap-3 text-stone">
+                  <CheckCircle className="w-5 h-5 text-brass mt-0.5 flex-shrink-0" /> {b}
                 </div>
               ))}
             </div>
           </div>
         </div>
 
-        {/* Stat Callout Box */}
-        <div className="bg-gray-900 rounded-xl p-8 text-center text-white mb-12 sm:p-12">
-          <div className="max-w-3xl mx-auto">
-            <div className="text-4xl font-bold mb-4 sm:text-5xl lg:text-6xl">127</div>
-            <p className="text-lg font-light leading-relaxed sm:text-xl">
-              families in West Hampstead, Brondesbury, Kingsbury, Harrow & Kensington have transformed their Victorian and Edwardian homes with us since 2010.
-            </p>
-          </div>
-        </div>
-
-        {/* CTA Button */}
-        <div className="text-center">
-          <Link 
-            to="/portfolio"
-            className="group inline-flex items-center gap-3 px-12 py-5 bg-gray-900 text-white text-sm tracking-wider uppercase font-medium transition-all duration-500 hover:bg-gray-800 rounded-lg"
-          >
-            See All Our Projects
-            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+        {/* Stat + CTA */}
+        <div className="rounded-card bg-brass-tint px-8 py-12 sm:px-14 text-center">
+          <div className="font-display font-semibold text-ink text-5xl sm:text-6xl mb-3">127</div>
+          <p className="text-ink/80 text-lg max-w-2xl mx-auto mb-8">
+            families in West Hampstead, Brondesbury, Kingsbury, Harrow and Kensington have transformed their
+            Victorian and Edwardian homes with us since 2010.
+          </p>
+          <Link to="/portfolio" className="group inline-flex items-center gap-3 pl-8 pr-3 py-4 bg-ink text-cream rounded-full font-medium hover:bg-ink-soft transition-colors">
+            See all our projects
+            <CircleArrow className="text-brass group-hover:rotate-45 transition-transform duration-300" />
           </Link>
         </div>
       </div>

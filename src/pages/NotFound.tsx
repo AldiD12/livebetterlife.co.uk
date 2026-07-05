@@ -19,9 +19,9 @@ const NotFound = () => {
 
   // Featured projects to recapture user interest
   const featuredProjects = [
-    { title: 'Kingsbury Road NW9', path: '/portfolio/NW9' },
-    { title: 'Brondsbury Road NW6', path: '/portfolio/NW6' },
-    { title: 'Rusell Garden Muse W14', path: '/portfolio/W14' }
+    { title: 'Kingsbury Road NW9', path: '/portfolio/house-conversion-flats-kingsbury-nw9' },
+    { title: 'Brondesbury Road NW6', path: '/portfolio/victorian-flat-renovation-brondesbury-nw6' },
+    { title: 'Russell Gardens Mews W14', path: '/portfolio/luxury-renovation-russell-gardens-mews-kensington-w14' }
   ];
 
   return (

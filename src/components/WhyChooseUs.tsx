@@ -1,278 +1,110 @@
 import { Link } from 'react-router-dom';
-import { PoundSterling, MapPin, Clock, Shield, MessageCircle, Home, CheckCircle, Star } from 'lucide-react';
+import { PoundSterling, MapPin, Clock, Shield, MessageCircle, Home, CheckCircle } from 'lucide-react';
+
+const CircleArrow = ({ className = '' }: { className?: string }) => (
+  <span className={`inline-flex items-center justify-center w-6 h-6 rounded-full border border-current ${className}`} aria-hidden="true">
+    <svg className="w-3 h-3" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="1.5">
+      <path d="M3 9L9 3M9 3H4M9 3V8" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  </span>
+);
+
+const features = [
+  {
+    icon: PoundSterling,
+    title: 'Fixed-price guarantee',
+    copy: 'No hidden costs, ever. The price quoted is the price paid.',
+    points: ['Stage payments at 25% increments', 'Transparent itemised quotes', 'No surprise charges', 'A contract that protects you'],
+    highlight: 'Tennyson Road NW6 — quoted contract price matched final completion cost exactly.',
+  },
+  {
+    icon: MapPin,
+    title: 'NW London specialists since 2010',
+    copy: '15+ years exclusively across West Hampstead, Brondesbury, Kingsbury, Harrow and Kensington.',
+    points: ['Camden & Brent planning inside-out', 'Every conservation-area rule in NW6', 'Westminster & RBKC listed-building protocols', 'The merchants that deliver fastest to your postcode'],
+    highlight: '89% of our projects are within 5 miles of each other — your neighbour probably knows us.',
+  },
+  {
+    icon: Clock,
+    title: 'On-time delivery',
+    copy: '89% of projects finish on time or early. Industry average delay is 3 weeks; ours is 2 days.',
+    points: ['Professional project managers', 'Our own trusted subcontractors', 'Materials ordered 2 weeks ahead', 'Weekly progress meetings'],
+    highlight: 'Tennyson Road NW6 finished 3 days early. Kingsbury Road NW9 a week early.',
+  },
+  {
+    icon: Shield,
+    title: 'Fully protected & insured',
+    copy: 'Sleep easy knowing you and your home are covered.',
+    points: ['£5M public liability insurance', '£10M employer\'s liability', '12-month workmanship guarantee', '10-year structural warranty (where applicable)'],
+    highlight: 'CHAS accredited · Constructionline registered · all work signed off by Building Control.',
+  },
+  {
+    icon: MessageCircle,
+    title: 'Real communication',
+    copy: 'Direct access to your project manager from day one.',
+    points: ['Mobile number from day 1', 'WhatsApp updates with photos', 'Weekly on-site meetings', 'Questions answered within 2 hours'],
+    highlight: '"Daily photos, weekly meetings, always available on WhatsApp." — West Hampstead',
+  },
+  {
+    icon: Home,
+    title: 'Local proof you can verify',
+    copy: '127 completed renovations across NW London since 2010 — real streets you can drive past.',
+    points: ['West Hampstead & Brondesbury (NW6)', 'Kingsbury (NW9) · Mill Hill (NW7)', 'Harrow & Kenton (HA3)', 'Kensington (W14) · Mayfair (W1K)'],
+    highlight: 'Ask your neighbours on these streets — they watched us work.',
+  },
+];
 
 const WhyChooseUs = () => {
-  const localExpertise = [
-    "Camden Council planning officers by name",
-    "Brent planning requirements inside-out", 
-    "Every conservation area rule in NW6",
-    "Which builders' merchants deliver fastest to your postcode",
-    "Westminster & RBKC listed building protocols"
-  ];
-
-  const onTimeDelivery = [
-    "Professional project managers",
-    "Our own trusted subcontractors (not random)",
-    "Material ordered 2 weeks in advance", 
-    "Weather contingency in timeline",
-    "Weekly progress meetings"
-  ];
-
-  const recentCompletions = [
-    "Tennyson Road NW6: Finished 3 days early ✓",
-    "Brondesbury Road NW6: On time ✓",
-    "Kingsbury Road NW9: Finished 1 week early ✓"
-  ];
-
-  const insurance = [
-    "£5M public liability insurance",
-    "£10M employer's liability insurance",
-    "12-month workmanship guarantee",
-    "10-year structural warranty (where applicable)"
-  ];
-
-  const accreditations = [
-    "FMB (Federation of Master Builders) approved",
-    "CHAS health & safety accredited",
-    "Constructionline registered", 
-    "TrustMark government-endorsed"
-  ];
-
-  const communication = [
-    "Mobile number from day 1",
-    "WhatsApp updates with photos (daily if you want)",
-    "Weekly on-site meetings",
-    "Questions answered within 2 hours",
-    "No offshore call centers",
-    "Same project manager start to finish"
-  ];
-
-  const recentProjects = [
-    { text: "Tennyson Road, West Hampstead NW6", link: "/locations/west-hampstead-nw6" },
-    { text: "Brondesbury Road, Brondesbury NW6", link: "/locations/west-hampstead-nw6" },
-    { text: "Russell Gardens Mews, Kensington W14", link: "/locations/kensington-mayfair-prime" },
-    { text: "Davies Street, Mayfair W1K", link: "/locations/kensington-mayfair-prime" },
-    { text: "Kingsbury Road, Kingsbury NW9", link: "/locations/harrow-ha3" },
-    { text: "Kenton Lane, Harrow HA3", link: "/locations/harrow-ha3" }
-  ];
-
   return (
-    <section className="py-20 bg-gray-50 sm:py-32">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
-        
-        {/* Section Heading */}
-        <div className="text-center mb-16 sm:mb-20">
-          <div className="inline-flex items-center gap-3 mb-6">
-            <div className="w-12 h-px bg-gray-300"></div>
-            <span className="text-sm tracking-[0.3em] text-gray-500 uppercase">Why Choose Us</span>
-            <div className="w-12 h-px bg-gray-300"></div>
+    <section className="py-20 sm:py-28 bg-cream">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-10">
+        {/* Heading */}
+        <div className="max-w-3xl mb-14 sm:mb-16">
+          <div className="inline-flex items-center gap-3 mb-5">
+            <span className="w-8 h-px bg-brass" />
+            <span className="text-xs font-medium uppercase tracking-[0.18em] text-brass-deep">Why choose us</span>
           </div>
-          <h2 className="text-3xl font-light tracking-wide text-gray-900 font-serif mb-6 sm:text-4xl md:text-5xl lg:tracking-[0.2em]">
-            Why 127 NW London Families Choose LiveBetterLife
+          <h2 className="font-display font-semibold text-ink text-3xl sm:text-4xl lg:text-5xl leading-tight mb-5">
+            Why 127 NW London families chose Live Better Life
           </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed font-light sm:text-xl">
-            We're not just contractors - we're your neighbors' renovation specialists
+          <p className="text-lg text-stone leading-relaxed">
+            We're not just contractors — we're your neighbours' renovation specialists.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
-          
-          {/* BENEFIT BOX 1 - Fixed-Price Guarantee */}
-          <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-200">
-            <div className="flex items-center gap-3 mb-4">
-              <PoundSterling className="w-8 h-8 text-green-600" />
-              <h3 className="text-2xl font-medium text-gray-900">Fixed-Price Guarantee</h3>
-            </div>
-            <p className="text-gray-600 mb-6 text-lg">
-              No hidden costs. Ever. Price quoted = price paid.
-            </p>
-            <div className="space-y-2 mb-6">
-              <div className="flex items-center gap-2">
-                <CheckCircle className="w-4 h-4 text-green-600" />
-                <span className="text-gray-700">Stage payments at 25% increments</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle className="w-4 h-4 text-green-600" />
-                <span className="text-gray-700">Transparent itemized quotes</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle className="w-4 h-4 text-green-600" />
-                <span className="text-gray-700">No surprise charges</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle className="w-4 h-4 text-green-600" />
-                <span className="text-gray-700">Contract protects you</span>
-              </div>
-            </div>
-            <div className="bg-green-50 border border-green-200 rounded-lg p-4">
-              <div className="font-medium text-green-800 mb-1">Recent example: Tennyson Road NW6</div>
-              <div className="text-green-700">Quoted: £85,000 | Final cost: £85,000 ✓</div>
-            </div>
-          </div>
-
-          {/* BENEFIT BOX 2 - NW London Specialists */}
-          <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-200">
-            <div className="flex items-center gap-3 mb-4">
-              <MapPin className="w-8 h-8 text-blue-600" />
-              <h3 className="text-2xl font-medium text-gray-900">NW London Specialists Since 2010</h3>
-            </div>
-            <p className="text-gray-600 mb-6 text-lg">
-              15+ years exclusively in West Hampstead, Brondesbury, Kingsbury, Harrow & Kensington.
-            </p>
-            <div className="mb-6">
-              <div className="font-medium text-gray-900 mb-3">We know:</div>
-              <div className="space-y-2">
-                {localExpertise.map((item, index) => (
-                  <div key={index} className="flex items-start gap-2">
-                    <CheckCircle className="w-4 h-4 text-blue-600 mt-0.5 flex-shrink-0" />
-                    <span className="text-gray-700 text-sm">{item}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
-              <div className="text-blue-800 font-medium">89% of our projects are within 5 miles of each other.</div>
-              <div className="text-blue-700">Your neighbor probably knows us.</div>
-            </div>
-          </div>
-
-          {/* BENEFIT BOX 3 - On-Time Delivery */}
-          <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-200">
-            <div className="flex items-center gap-3 mb-4">
-              <Clock className="w-8 h-8 text-orange-600" />
-              <h3 className="text-2xl font-medium text-gray-900">On-Time Delivery</h3>
-            </div>
-            <div className="mb-6">
-              <div className="text-lg font-medium text-gray-900 mb-2">89% of projects finish on time or early.</div>
-              <div className="grid sm:grid-cols-2 gap-4 text-sm">
-                <div>
-                  <span className="text-gray-600">Industry average delay:</span>
-                  <span className="font-medium text-red-600 ml-1">3 weeks</span>
+        {/* Cards */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {features.map((f) => {
+            const Icon = f.icon;
+            return (
+              <div key={f.title} className="bg-ivory rounded-card shadow-card border border-line p-8 flex flex-col">
+                <div className="w-12 h-12 rounded-full bg-brass-tint flex items-center justify-center mb-5">
+                  <Icon className="w-6 h-6 text-brass-deep" />
                 </div>
-                <div>
-                  <span className="text-gray-600">Our average delay:</span>
-                  <span className="font-medium text-green-600 ml-1">2 days</span>
+                <h3 className="font-display text-xl text-ink mb-3">{f.title}</h3>
+                <p className="text-stone leading-relaxed mb-5">{f.copy}</p>
+                <div className="space-y-2.5 mb-6">
+                  {f.points.map((p) => (
+                    <div key={p} className="flex items-start gap-2.5">
+                      <CheckCircle className="w-4 h-4 text-brass mt-0.5 flex-shrink-0" />
+                      <span className="text-sm text-stone">{p}</span>
+                    </div>
+                  ))}
+                </div>
+                <div className="mt-auto bg-brass-tint/60 border border-brass/20 rounded-xl p-4">
+                  <p className="text-sm text-ink/80">{f.highlight}</p>
                 </div>
               </div>
-            </div>
-            <div className="mb-6">
-              <div className="font-medium text-gray-900 mb-3">How we do it:</div>
-              <div className="space-y-2">
-                {onTimeDelivery.map((item, index) => (
-                  <div key={index} className="flex items-start gap-2">
-                    <CheckCircle className="w-4 h-4 text-orange-600 mt-0.5 flex-shrink-0" />
-                    <span className="text-gray-700 text-sm">{item}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className="bg-orange-50 border border-orange-200 rounded-lg p-4">
-              <div className="font-medium text-orange-800 mb-2">Recent on-time completions:</div>
-              <div className="space-y-1">
-                {recentCompletions.map((completion, index) => (
-                  <div key={index} className="text-orange-700 text-sm">{completion}</div>
-                ))}
-              </div>
-            </div>
-          </div>
+            );
+          })}
+        </div>
 
-          {/* BENEFIT BOX 4 - Fully Protected & Insured */}
-          <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-200">
-            <div className="flex items-center gap-3 mb-4">
-              <Shield className="w-8 h-8 text-purple-600" />
-              <h3 className="text-2xl font-medium text-gray-900">Fully Protected & Insured</h3>
-            </div>
-            <p className="text-gray-600 mb-6 text-lg">
-              Sleep easy knowing you're protected:
-            </p>
-            <div className="mb-6">
-              <div className="space-y-2 mb-4">
-                {insurance.map((item, index) => (
-                  <div key={index} className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-purple-600" />
-                    <span className="text-gray-700">{item}</span>
-                  </div>
-                ))}
-              </div>
-              <div className="font-medium text-gray-900 mb-3">Accreditations:</div>
-              <div className="space-y-2">
-                {accreditations.map((item, index) => (
-                  <div key={index} className="flex items-start gap-2">
-                    <CheckCircle className="w-4 h-4 text-purple-600 mt-0.5 flex-shrink-0" />
-                    <span className="text-gray-700 text-sm">{item}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className="bg-purple-50 border border-purple-200 rounded-lg p-4">
-              <div className="text-purple-800 font-medium">All work signed off by Building Control.</div>
-            </div>
-          </div>
-
-          {/* BENEFIT BOX 5 - Real Communication */}
-          <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-200">
-            <div className="flex items-center gap-3 mb-4">
-              <MessageCircle className="w-8 h-8 text-teal-600" />
-              <h3 className="text-2xl font-medium text-gray-900">Real Communication</h3>
-            </div>
-            <p className="text-gray-600 mb-6 text-lg">
-              Direct access to your project manager:
-            </p>
-            <div className="space-y-2 mb-6">
-              {communication.map((item, index) => (
-                <div key={index} className="flex items-start gap-2">
-                  <CheckCircle className="w-4 h-4 text-teal-600 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700 text-sm">{item}</span>
-                </div>
-              ))}
-            </div>
-            <div className="bg-teal-50 border border-teal-200 rounded-lg p-4">
-              <div className="flex items-center gap-1 mb-2">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                ))}
-              </div>
-              <p className="text-teal-800 italic mb-2">
-                "The communication was exceptional. Daily photos, weekly meetings, always available on WhatsApp."
-              </p>
-              <p className="text-teal-700 text-sm">- Tennyson Road, West Hampstead</p>
-            </div>
-          </div>
-
-          {/* BENEFIT BOX 6 - Local Proof */}
-          <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-200">
-            <div className="flex items-center gap-3 mb-4">
-              <Home className="w-8 h-8 text-indigo-600" />
-              <h3 className="text-2xl font-medium text-gray-900">Local Proof You Can Verify</h3>
-            </div>
-            <p className="text-gray-600 mb-6 text-lg">
-              127 completed renovations in NW London since 2010.
-            </p>
-            <div className="mb-6">
-              <div className="font-medium text-gray-900 mb-3">Recent projects you can see:</div>
-              <div className="space-y-2">
-                {recentProjects.map((project, index) => (
-                  <Link key={index} to={project.link} className="flex items-center gap-2 hover:text-blue-600 transition-colors group">
-                    <MapPin className="w-4 h-4 text-indigo-600 group-hover:text-blue-600" />
-                    <span className="text-gray-700 text-sm group-hover:text-blue-600">{project.text}</span>
-                  </Link>
-                ))}
-              </div>
-            </div>
-            <div className="bg-indigo-50 border border-indigo-200 rounded-lg p-4 mb-6">
-              <div className="text-indigo-800 space-y-1">
-                <div>Ask your neighbors on these streets - they know us.</div>
-                <div>Drive by and see our work.</div>
-                <div className="font-medium">6 projects completed in 2023-2024 alone.</div>
-              </div>
-            </div>
-            <Link 
-              to="/portfolio"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-indigo-600 text-white text-sm tracking-wider uppercase font-medium transition-all duration-500 hover:bg-indigo-700 rounded-lg"
-            >
-              See All Project Addresses
-            </Link>
-          </div>
+        {/* CTA */}
+        <div className="mt-14 text-center">
+          <Link to="/portfolio" className="group inline-flex items-center gap-3 pl-8 pr-3 py-4 bg-ink text-cream rounded-full font-medium hover:bg-ink-soft transition-colors">
+            See all our projects
+            <CircleArrow className="text-brass group-hover:rotate-45 transition-transform duration-300" />
+          </Link>
         </div>
       </div>
     </section>

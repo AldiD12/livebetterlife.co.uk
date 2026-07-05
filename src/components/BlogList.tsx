@@ -63,7 +63,7 @@ const BlogList: React.FC = () => {
         "name": post.author?.name || author.name,
         "jobTitle": post.author?.title || author.title,
         "image": post.featuredImage?.url || author.image,
-        "sameAs": "https://livebetterlife.co.uk/about"
+        "sameAs": "https://livebetterlife.co.uk"
       },
       "publisher": {
         "@type": "Organization",

@@ -6,7 +6,7 @@ const TrustSignals = () => {
     {
       name: "Sarah & James Mitchell",
       location: "Chiswick, W4",
-      project: "Full House Renovation - £120k",
+      project: "Full House Renovation & Reconfiguration",
       rating: 5,
       text: "Exceptional work on our Victorian house renovation. The team managed everything professionally and delivered exactly what we envisioned. Worth every penny.",
       image: "/images/testimonials/sarah-james.jpg"
@@ -14,7 +14,7 @@ const TrustSignals = () => {
     {
       name: "David Thompson",
       location: "Kilburn, NW6", 
-      project: "Kitchen Extension - £85k",
+      project: "Luxury Kitchen Extension",
       rating: 5,
       text: "Outstanding kitchen extension that transformed our home. The project management was flawless and they stayed within budget and timeline.",
       image: "/images/testimonials/david.jpg"
@@ -22,7 +22,7 @@ const TrustSignals = () => {
     {
       name: "Emma Rodriguez",
       location: "Kensal Green, NW10",
-      project: "Loft Conversion - £65k",
+      project: "Dormer Loft Conversion",
       rating: 5,
       text: "Professional, reliable, and delivered exceptional quality. Our loft conversion exceeded expectations and added significant value to our property.",
       image: "/images/testimonials/emma.jpg"
@@ -30,7 +30,6 @@ const TrustSignals = () => {
   ];
 
   const certifications = [
-    { name: "Federation of Master Builders", logo: "/images/certifications/fmb.png" },
     { name: "NHBC Registered", logo: "/images/certifications/nhbc.png" },
     { name: "Checkatrade Approved", logo: "/images/certifications/checkatrade.png" },
     { name: "Which? Trusted Trader", logo: "/images/certifications/which.png" }
@@ -39,8 +38,8 @@ const TrustSignals = () => {
   const stats = [
     { number: "200+", label: "Projects Completed", icon: Award },
     { number: "15+", label: "Years Experience", icon: Shield },
-    { number: "98%", label: "Client Satisfaction", icon: Star },
-    { number: "£2.5M+", label: "Projects Delivered", icon: Users }
+    { number: "100%", label: "Fixed Pricing", icon: Star },
+    { number: "£5M", label: "Insured Coverage", icon: Users }
   ];
 
   return (

@@ -109,11 +109,11 @@ const KitchenPlumbingRelocationLondon = () => {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="tel:+442081234567"
+                href="tel:+447387844751"
                 className="inline-flex items-center justify-center px-8 py-4 bg-white text-gray-900 rounded hover:bg-gray-100 transition-colors"
               >
                 <Phone className="w-5 h-5 mr-2" />
-                Call: 020 8123 4567
+                Call: 07387 844751
               </a>
               <Link
                 to="/contact"

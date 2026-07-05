@@ -13,6 +13,7 @@ import PortfolioPage from './pages/Portfolio';
 import ContactPage from './pages/Contact';
 import ProjectDetail from './pages/ProjectDetail';
 import UnderConstruction from './pages/UnderConstruction';
+import NotFound from './pages/NotFound';
 import BlogPage from './pages/Blog';
 import Privacy from './pages/Privacy';
 import KitchenRenovationLondon from './pages/services/KitchenRenovationLondon';
@@ -156,6 +157,7 @@ const App = () => {
             <Route path="/estimate" element={<UnderConstruction />} />
             <Route path="/blog/*" element={<BlogPage />} />
             <Route path="/privacy" element={<Privacy />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
         <Footer />

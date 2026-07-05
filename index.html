@@ -58,14 +58,14 @@
     <!-- Enhanced Resource Hints -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Marcellus&display=swap" as="style" />
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" as="style" />
     <link rel="preload" href="/images/logo.png" as="image" />
     <link rel="dns-prefetch" href="https://livebetterlife.co.uk" />
     <link rel="preconnect" href="https://livebetterlife.co.uk" />
     <link rel="preload" href="/images/og-image.jpg" as="image" />
-    
+
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Marcellus&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     
     <!-- Enhanced Structured Data -->
     <script type="application/ld+json">
@@ -77,9 +77,8 @@
         "description": "Expert house renovation services in London's NW6, NW9 & W14 areas. Specializing in luxury home extensions, kitchen remodeling, and bathroom renovations.",
         "address": {
           "@type": "PostalAddress",
-          "streetAddress": "[Your Street Address]",
           "addressLocality": "London",
-          "postalCode": "[Your Postcode]",
+          "addressRegion": "Greater London",
           "addressCountry": "GB"
         },
         "geo": {
@@ -88,27 +87,29 @@
           "longitude": -0.1278
         },
         "url": "https://livebetterlife.co.uk",
-        "telephone": "[Your Phone Number]",
+        "email": "info@livebetterlife.co.uk",
+        "telephone": "+447387844751",
         "priceRange": "£££",
-        "openingHoursSpecification": {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": [
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday"
-          ],
-          "opens": "09:00",
-          "closes": "17:00"
-        },
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "5.0",
-          "reviewCount": "50",
-          "bestRating": "5",
-          "worstRating": "1"
-        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday"
+            ],
+            "opens": "08:00",
+            "closes": "18:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Saturday",
+            "opens": "09:00",
+            "closes": "14:00"
+          }
+        ],
         "areaServed": {
           "@type": "GeoCircle",
           "geoMidpoint": {
@@ -160,12 +161,6 @@
             }
           ]
         },
-        "sameAs": [
-          "https://www.facebook.com/[Your Facebook]",
-          "https://www.instagram.com/[Your Instagram]",
-          "https://www.linkedin.com/company/[Your LinkedIn]",
-          "https://www.houzz.co.uk/professionals/building-and-renovation/live-better-life-pfvwgb-pf~[Your Houzz ID]"
-        ],
         "additionalType": [
           "https://www.wikidata.org/wiki/Q16917",
           "https://www.wikidata.org/wiki/Q3954054"
@@ -181,7 +176,6 @@
           "Customer Service Excellence Award 2023"
         ],
         "memberOf": [
-          "Federation of Master Builders",
           "National Federation of Builders"
         ]
       }

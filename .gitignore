@@ -23,6 +23,12 @@ dist-ssr
 *.sln
 *.sw?
 
+# Secrets / service-account keys (NEVER commit)
+service-account.json
+scripts/service-account.json
+*service-account*.json
+*.pem
+
 # Large media files
 *.mov
 *.mp4

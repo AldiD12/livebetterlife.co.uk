@@ -9,32 +9,37 @@ interface BreadcrumbProps {
 }
 
 const Breadcrumb: React.FC<BreadcrumbProps> = ({ items }) => {
+  if (!items || items.length === 0) return null;
+
   return (
-    <nav className="bg-gray-50 py-4" aria-label="Breadcrumb">
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-        <ol className="flex items-center space-x-2 text-sm">
+    <nav className="bg-cream pt-24 pb-2" aria-label="Breadcrumb">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-10">
+        <ol className="flex items-center flex-wrap gap-y-1 gap-x-2 text-sm text-stone">
+          <li>
+            <Link to="/" className="hover:text-ink transition-colors">Home</Link>
+          </li>
+
           {items.map((item, index) => (
-            <li key={index} className="flex items-center">
-              {index > 0 && (
-                <svg
-                  className="flex-shrink-0 h-4 w-4 text-gray-400"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  aria-hidden="true"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-              )}
+            <li key={index} className="flex items-center gap-2">
+              <svg
+                className="w-3 h-3 text-line"
+                viewBox="0 0 12 12"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                aria-hidden="true"
+              >
+                <path d="M4 2l4 4-4 4" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+
               {item.isActive ? (
-                <span className="text-gray-600 font-light">{item.name}</span>
+                <span className="text-ink font-medium" aria-current="page">
+                  {item.name}
+                </span>
               ) : (
                 <Link
                   to={item.item}
-                  className="text-gray-600 hover:text-gray-900 font-light transition-colors duration-200"
+                  className="hover:text-ink transition-colors"
                 >
                   {item.name}
                 </Link>

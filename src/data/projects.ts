@@ -98,7 +98,7 @@ export const projects: Project[] = [
         '/images/projects/project2/progress/progress4.jpeg',
         '/images/projects/project2/progress/7.jpeg',
         '/images/projects/project2/progress/6.jpeg',
-        '/images/projects/project2/progress/progress1.png',
+        '/images/projects/project2/progress/progress1.jpg',
         '/images/projects/project2/progress/progress3.jpeg',
         '/images/projects/project2/progress/prgree8.jpeg',
       ],
@@ -429,5 +429,134 @@ export const projects: Project[] = [
         'Modern color palette and finishes'
       ]
     }
+  },
+  {
+    id: 'bolton-gardens',
+    slug: 'loft-conversion-rear-extension-bolton-gardens-nw10',
+    title: 'Loft Conversion & Rear Extension',
+    category: 'Residential',
+    location: 'Bolton Gardens, NW10',
+    year: '2026',
+    description: 'Full refurbishment of a three-storey Victorian terrace in NW10. Structural rear extension with steel goalpost frames, a complete loft conversion with new roof structure, and internal remodelling throughout — all while retaining the original period façade.',
+    heroImage: '/images/projects/project7/before/bolton-gardens-nw10-loft-extension-before-front-facade-1.jpeg',
+    images: {
+      before: [
+        '/images/projects/project7/before/bolton-gardens-nw10-loft-extension-before-front-facade-1.jpeg',
+        '/images/projects/project7/before/bolton-gardens-nw10-loft-extension-before-front-facade-2.jpeg',
+        '/images/projects/project7/before/bolton-gardens-nw10-loft-extension-before-entrance-period-detail.jpeg'
+      ],
+      progress: [
+        '/images/projects/project7/progress/bolton-gardens-nw10-loft-extension-progress-01-site-setup-skip-hoarding.jpeg',
+        '/images/projects/project7/progress/bolton-gardens-nw10-loft-extension-progress-02-steel-beam-delivery.jpeg',
+        '/images/projects/project7/progress/bolton-gardens-nw10-loft-extension-progress-03-steel-beam-foundation.jpeg',
+        '/images/projects/project7/progress/bolton-gardens-nw10-loft-extension-progress-04-steel-rsj-installation.jpeg',
+        '/images/projects/project7/progress/bolton-gardens-nw10-loft-extension-progress-05-rear-structural-opening.jpeg',
+        '/images/projects/project7/progress/bolton-gardens-nw10-loft-extension-progress-06-rear-steel-goalpost.jpeg',
+        '/images/projects/project7/progress/bolton-gardens-nw10-loft-extension-progress-07-rear-elevation-steelwork.jpeg',
+        '/images/projects/project7/progress/bolton-gardens-nw10-loft-extension-progress-08-open-plan-rear-extension.jpeg',
+        '/images/projects/project7/progress/bolton-gardens-nw10-loft-extension-progress-09-chimney-breast-structural.jpeg',
+        '/images/projects/project7/progress/bolton-gardens-nw10-loft-extension-progress-10-eaves-timber-wall-plate-repair.jpeg',
+        '/images/projects/project7/progress/bolton-gardens-nw10-loft-extension-progress-11-roof-eaves-works.jpeg',
+        '/images/projects/project7/progress/bolton-gardens-nw10-loft-extension-progress-12-loft-steel-ridge-beam.jpeg',
+        '/images/projects/project7/progress/bolton-gardens-nw10-loft-extension-progress-13-loft-timber-rafters.jpeg',
+        '/images/projects/project7/progress/bolton-gardens-nw10-loft-extension-progress-14-loft-roof-structure.jpeg',
+        '/images/projects/project7/progress/bolton-gardens-nw10-loft-extension-progress-15-loft-ceiling-joists.jpeg',
+        '/images/projects/project7/progress/bolton-gardens-nw10-loft-extension-progress-16-brickwork-repointing.jpeg',
+        '/images/projects/project7/progress/bolton-gardens-nw10-loft-extension-progress-17-new-window-opening.jpeg',
+        '/images/projects/project7/progress/bolton-gardens-nw10-loft-extension-progress-18-new-floor-joists.jpeg',
+        '/images/projects/project7/progress/bolton-gardens-nw10-loft-extension-progress-19-plastered-room-screed.jpeg',
+        '/images/projects/project7/progress/bolton-gardens-nw10-loft-extension-progress-20-room-new-floor.jpeg'
+      ],
+      after: []
+    },
+    details: {
+      duration: 'Work in Progress',
+      services: [
+        'Structural Rear Extension',
+        'Loft Conversion',
+        'Steel Beam Installation',
+        'Full House Refurbishment',
+        'Structural Alterations',
+        'Brickwork & Repointing',
+        'Roof Structure Renewal'
+      ],
+      features: [
+        'Three-storey Victorian terrace',
+        'Rear extension with steel goalpost frames',
+        'Full loft conversion with new roof structure',
+        'New structural steelwork throughout',
+        'Original period façade retained'
+      ]
+    }
+  },
+  {
+    id: 'devonshire-road',
+    slug: 'luxury-full-house-rebuild-devonshire-road-nw7',
+    title: 'Luxury Full House Rebuild',
+    category: 'Residential',
+    location: 'Devonshire Road, NW7',
+    year: '2026',
+    description: 'A complete demolition and ground-up rebuild of a 1930s semi-detached home in Mill Hill NW7. New foundations, structural steelwork, a full rear extension and loft conversion with dormers and rooflights, integrated solar panels, curved architectural walls, a bespoke staircase, underfloor heating throughout, and premium engineered-wood and microcement finishes.',
+    heroImage: '/images/projects/project8/before/devonshire-road-nw7-full-rebuild-before-front-facade.jpeg',
+    images: {
+      before: [
+        '/images/projects/project8/before/devonshire-road-nw7-full-rebuild-before-front-facade.jpeg',
+        '/images/projects/project8/before/devonshire-road-nw7-full-rebuild-before-rear-garden-original.jpeg'
+      ],
+      progress: [
+        '/images/projects/project8/progress/devonshire-road-nw7-full-rebuild-progress-01-demolition-rear.jpeg',
+        '/images/projects/project8/progress/devonshire-road-nw7-full-rebuild-progress-02-demolition-aerial.jpeg',
+        '/images/projects/project8/progress/devonshire-road-nw7-full-rebuild-progress-03-strip-out-interior.jpeg',
+        '/images/projects/project8/progress/devonshire-road-nw7-full-rebuild-progress-04-steel-delivery-crane.jpeg',
+        '/images/projects/project8/progress/devonshire-road-nw7-full-rebuild-progress-05-foundation-excavation.jpeg',
+        '/images/projects/project8/progress/devonshire-road-nw7-full-rebuild-progress-06-foundation-steelwork.jpeg',
+        '/images/projects/project8/progress/devonshire-road-nw7-full-rebuild-progress-07-concrete-slab.jpeg',
+        '/images/projects/project8/progress/devonshire-road-nw7-full-rebuild-progress-08-structural-steel-beams.jpeg',
+        '/images/projects/project8/progress/devonshire-road-nw7-full-rebuild-progress-09-rear-extension-blockwork.jpeg',
+        '/images/projects/project8/progress/devonshire-road-nw7-full-rebuild-progress-10-rear-extension-brickwork.jpeg',
+        '/images/projects/project8/progress/devonshire-road-nw7-full-rebuild-progress-11-roof-strip-out.jpeg',
+        '/images/projects/project8/progress/devonshire-road-nw7-full-rebuild-progress-12-new-roof-tiled.jpeg',
+        '/images/projects/project8/progress/devonshire-road-nw7-full-rebuild-progress-13-loft-roof-structure.jpeg',
+        '/images/projects/project8/progress/devonshire-road-nw7-full-rebuild-progress-14-loft-dormer-framing.jpeg',
+        '/images/projects/project8/progress/devonshire-road-nw7-full-rebuild-progress-15-loft-rooflights-frame.jpeg',
+        '/images/projects/project8/progress/devonshire-road-nw7-full-rebuild-progress-16-bespoke-staircase-frame.jpeg',
+        '/images/projects/project8/progress/devonshire-road-nw7-full-rebuild-progress-17-flat-roof-complete.jpeg',
+        '/images/projects/project8/progress/devonshire-road-nw7-full-rebuild-progress-18-solar-panels.jpeg',
+        '/images/projects/project8/progress/devonshire-road-nw7-full-rebuild-progress-19-first-fix-electrics.jpeg',
+        '/images/projects/project8/progress/devonshire-road-nw7-full-rebuild-progress-20-ceiling-services.jpeg',
+        '/images/projects/project8/progress/devonshire-road-nw7-full-rebuild-progress-21-curved-wall-feature.jpeg',
+        '/images/projects/project8/progress/devonshire-road-nw7-full-rebuild-progress-22-plastered-hallway.jpeg',
+        '/images/projects/project8/progress/devonshire-road-nw7-full-rebuild-progress-23-plastered-stairwell.jpeg',
+        '/images/projects/project8/progress/devonshire-road-nw7-full-rebuild-progress-24-underfloor-heating-manifold.jpeg',
+        '/images/projects/project8/progress/devonshire-road-nw7-full-rebuild-progress-25-underfloor-heating.jpeg',
+        '/images/projects/project8/progress/devonshire-road-nw7-full-rebuild-progress-26-engineered-wood-flooring.jpeg'
+      ],
+      after: []
+    },
+    details: {
+      duration: 'Work in Progress',
+      services: [
+        'Full Demolition & Rebuild',
+        'New Foundations & Groundworks',
+        'Structural Steelwork',
+        'Rear Extension',
+        'Loft Conversion with Dormers',
+        'New Roof & Rooflights',
+        'Solar Panel Installation',
+        'Underfloor Heating Throughout',
+        'Bespoke Staircase',
+        'Premium Flooring & Finishes'
+      ],
+      features: [
+        'Complete ground-up rebuild of a 1930s semi',
+        'Rear extension with steel-framed structural openings',
+        'Loft conversion with dormers and rooflights',
+        'Integrated roof-mounted solar panels',
+        'Curved architectural walls and bespoke staircase',
+        'Underfloor heating throughout',
+        'Engineered-wood and microcement floor finishes',
+        'Full-width bifold doors to the garden'
+      ]
+    }
   }
-]; 
+];

@@ -25,7 +25,7 @@ const services = [
     id: 'renovation-services',
     title: 'RENOVATION SERVICES',
     description: 'We specialize in complete renovation services, handling everything from start to finish. If you want to renovate your space, we ensure high-quality results at every step.',
-    image: '/images/services/image1.webp',
+    image: '/images/projects/project5/after/a20.jpeg',
     features: [
       'Full project management',
       'Sustainable solutions',
@@ -39,7 +39,7 @@ const services = [
     id: 'home-renovation',
     title: 'HOME RENOVATION & REMODELING',
     description: 'We improve and upgrade your home, increasing its value while enhancing comfort and functionality.',
-    image: '/images/services/image2.jpeg',
+    image: '/images/projects/project6/after/kenton-lane-harrow-ha3-ground-floor-renovation-after-living-room-custom-entertainment-unit-led-lighting-1.jpeg',
     features: [
       'Value enhancement',
       'Energy efficiency',
@@ -53,7 +53,7 @@ const services = [
     id: 'room-renovation',
     title: 'ROOM RENOVATION',
     description: 'Transform any room into a modern and functional space with our design and remodeling services. We specialize in creating new layouts, removing old fixtures, and installing fresh elements .',
-    image: '/images/services/image3.webp',
+    image: '/images/projects/project1/after/kingsbury-road-nw9-flats-conversion-after-interior-1.jpeg',
     features: [
       'Layout optimization',
       'Fixture modernization',
@@ -67,7 +67,7 @@ const services = [
     id: 'kitchen-renovation',
     title: 'KITCHEN RENOVATION',
     description: 'We specialize in stylish, functional kitchen makeovers using custom cabinetry, elegant lighting, and high-end finishes.',
-    image: '/images/services/image7.jpeg',
+    image: '/images/projects/project4/after/IMG_5009.jpg',
     features: [
       'Custom cabinetry',
       'High-end appliances',
@@ -81,7 +81,7 @@ const services = [
     id: 'bathroom-renovation',
     title: 'BATHROOM RENOVATION',
     description: 'Our bathroom remodel services focus on functionality and aesthetics, offering new fixtures, updated flooring, modern lighting, and efficient layouts. ',
-    image: '/images/services/image6.webp',
+    image: '/images/projects/project6/after/kenton-lane-harrow-ha3-ground-floor-renovation-after-bathroom-luxury-marble-walk-in-shower-1.jpeg',
     features: [
       'Modern fixtures',
       'Luxury flooring',
@@ -417,30 +417,26 @@ const ServicesPage = () => {
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <a href="/services/full-house-renovation-victorian-edwardian" className="block p-6 border border-gray-200 hover:border-gray-900 transition-colors duration-300">
-                <div className="flex justify-between items-start mb-3">
+                <div className="mb-3">
                   <h4 className="font-light text-gray-900 text-lg">Full House Renovation (Victorian & Edwardian)</h4>
-                  <span className="text-sm text-gray-600 font-light">From £60,000</span>
                 </div>
                 <p className="text-sm text-gray-600 leading-relaxed">Complete transformation of Victorian & Edwardian homes in NW6 & NW9. We strip back to brick, insulate, and rebuild for modern living.</p>
               </a>
               <a href="/services/structural-alterations-wall-removal" className="block p-6 border border-gray-200 hover:border-gray-900 transition-colors duration-300">
-                <div className="flex justify-between items-start mb-3">
+                <div className="mb-3">
                   <h4 className="font-light text-gray-900 text-lg">Structural Alterations & Wall Removal</h4>
-                  <span className="text-sm text-gray-600 font-light">From £3,500</span>
                 </div>
                 <p className="text-sm text-gray-600 leading-relaxed">Safe removal of load-bearing walls to create open-plan layouts. We handle all steel beam calculations and Building Control approvals.</p>
               </a>
               <a href="/services/structural-alterations-wall-removal" className="block p-6 border border-gray-200 hover:border-gray-900 transition-colors duration-300">
-                <div className="flex justify-between items-start mb-3">
+                <div className="mb-3">
                   <h4 className="font-light text-gray-900 text-lg">Open Plan Living Configurations</h4>
-                  <span className="text-sm text-gray-600 font-light">From £8,000</span>
                 </div>
                 <p className="text-sm text-gray-600 leading-relaxed">Reconfiguring cramped layouts in Harrow and Willesden properties to create spacious, flow-through living and dining areas.</p>
               </a>
               <a href="/contact" className="block p-6 border border-gray-200 hover:border-gray-900 transition-colors duration-300">
-                <div className="flex justify-between items-start mb-3">
+                <div className="mb-3">
                   <h4 className="font-light text-gray-900 text-lg">Design & Build Service (Planning to Completion)</h4>
-                  <span className="text-sm text-gray-600 font-light">From £50,000</span>
                 </div>
                 <p className="text-sm text-gray-600 leading-relaxed">We manage the entire process—from architectural drawings for Camden Council planning to the final coat of paint.</p>
               </a>
@@ -454,23 +450,20 @@ const ServicesPage = () => {
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <a href="/services/kitchen-extensions-side-returns" className="block p-6 border border-gray-200 hover:border-gray-900 transition-colors duration-300">
-                <div className="flex justify-between items-start mb-3">
+                <div className="mb-3">
                   <h4 className="font-light text-gray-900 text-lg">Kitchen Extensions & Side Returns</h4>
-                  <span className="text-sm text-gray-600 font-light">From £45,000</span>
                 </div>
                 <p className="text-sm text-gray-600 leading-relaxed">Maximize the potential of your terraced house with a side-return extension. Perfect for gaining space in West Hampstead and Queens Park.</p>
               </a>
               <a href="/services/loft-conversions-dormer-mansard" className="block p-6 border border-gray-200 hover:border-gray-900 transition-colors duration-300">
-                <div className="flex justify-between items-start mb-3">
+                <div className="mb-3">
                   <h4 className="font-light text-gray-900 text-lg">Loft Conversions (Dormer & Mansard)</h4>
-                  <span className="text-sm text-gray-600 font-light">From £35,000</span>
                 </div>
                 <p className="text-sm text-gray-600 leading-relaxed">Convert your attic into a master suite. Specialists in Mansard conversions for conservation areas and Dormers for Harrow semis.</p>
               </a>
               <a href="/services/kitchen-extensions-side-returns" className="block p-6 border border-gray-200 hover:border-gray-900 transition-colors duration-300">
-                <div className="flex justify-between items-start mb-3">
+                <div className="mb-3">
                   <h4 className="font-light text-gray-900 text-lg">Double Storey Rear Extensions</h4>
-                  <span className="text-sm text-gray-600 font-light">From £80,000</span>
                 </div>
                 <p className="text-sm text-gray-600 leading-relaxed">Add bedrooms upstairs and living space downstairs simultaneously. The most cost-effective way to add value in Kingsbury.</p>
               </a>
@@ -484,23 +477,20 @@ const ServicesPage = () => {
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <a href="/services/kitchen-extensions-side-returns" className="block p-6 border border-gray-200 hover:border-gray-900 transition-colors duration-300">
-                <div className="flex justify-between items-start mb-3">
+                <div className="mb-3">
                   <h4 className="font-light text-gray-900 text-lg">Kitchen Remodeling</h4>
-                  <span className="text-sm text-gray-600 font-light">From £25,000</span>
                 </div>
                 <p className="text-sm text-gray-600 leading-relaxed">Transform your entire kitchen with new cabinets, worktops, appliances, flooring, and lighting. We rip out everything old and build you a modern kitchen that works perfectly for your family.</p>
               </a>
               <a href="/services/bespoke-kitchen-installation" className="block p-6 border border-gray-200 hover:border-gray-900 transition-colors duration-300">
-                <div className="flex justify-between items-start mb-3">
+                <div className="mb-3">
                   <h4 className="font-light text-gray-900 text-lg">Bespoke Kitchen Installation</h4>
-                  <span className="text-sm text-gray-600 font-light">From £8,000</span>
                 </div>
                 <p className="text-sm text-gray-600 leading-relaxed">Custom-designed cabinetry and islands tailored to your space. We install premium units that fit perfectly in non-standard Victorian rooms.</p>
               </a>
               <a href="/services/kitchen-extensions-side-returns" className="block p-6 border border-gray-200 hover:border-gray-900 transition-colors duration-300">
-                <div className="flex justify-between items-start mb-3">
+                <div className="mb-3">
                   <h4 className="font-light text-gray-900 text-lg">Kitchen Extension</h4>
-                  <span className="text-sm text-gray-600 font-light">From £55,000</span>
                 </div>
                 <p className="text-sm text-gray-600 leading-relaxed">Knocking through to the garden to create the ultimate kitchen-diner.</p>
               </a>
@@ -514,23 +504,20 @@ const ServicesPage = () => {
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <a href="/portfolio" className="block p-6 border border-gray-200 hover:border-gray-900 transition-colors duration-300">
-                <div className="flex justify-between items-start mb-3">
+                <div className="mb-3">
                   <h4 className="font-light text-gray-900 text-lg">Luxury Wet Room & Walk-In Showers</h4>
-                  <span className="text-sm text-gray-600 font-light">From £18,000</span>
                 </div>
                 <p className="text-sm text-gray-600 leading-relaxed">Sleek, barrier-free showering spaces. Ideal for modernizing compact bathrooms in Kensington (W14) flats.</p>
               </a>
               <a href="/portfolio" className="block p-6 border border-gray-200 hover:border-gray-900 transition-colors duration-300">
-                <div className="flex justify-between items-start mb-3">
+                <div className="mb-3">
                   <h4 className="font-light text-gray-900 text-lg">Marble & Stone Bathroom Tiling</h4>
-                  <span className="text-sm text-gray-600 font-light">From £5,000</span>
                 </div>
                 <p className="text-sm text-gray-600 leading-relaxed">High-end natural stone and marble installation for a spa-like finish. Specialists in large-format tiling.</p>
               </a>
               <a href="/portfolio" className="block p-6 border border-gray-200 hover:border-gray-900 transition-colors duration-300">
-                <div className="flex justify-between items-start mb-3">
+                <div className="mb-3">
                   <h4 className="font-light text-gray-900 text-lg">Bathroom Remodeling</h4>
-                  <span className="text-sm text-gray-600 font-light">From £15,000</span>
                 </div>
                 <p className="text-sm text-gray-600 leading-relaxed">Transform your entire bathroom with new everything - tiles, suite, shower, lighting, and flooring. We rip out your old bathroom completely and build you a modern space that feels like a luxury hotel.</p>
               </a>
@@ -544,30 +531,26 @@ const ServicesPage = () => {
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <a href="/services/period-property-restoration" className="block p-6 border border-gray-200 hover:border-gray-900 transition-colors duration-300">
-                <div className="flex justify-between items-start mb-3">
+                <div className="mb-3">
                   <h4 className="font-light text-gray-900 text-lg">Period Property Restoration</h4>
-                  <span className="text-sm text-gray-600 font-light">From £80,000</span>
                 </div>
                 <p className="text-sm text-gray-600 leading-relaxed">Preserving the soul of your home while updating the systems. We work within Conservation Area guidelines.</p>
               </a>
               <a href="/services/period-property-restoration" className="block p-6 border border-gray-200 hover:border-gray-900 transition-colors duration-300">
-                <div className="flex justify-between items-start mb-3">
+                <div className="mb-3">
                   <h4 className="font-light text-gray-900 text-lg">Victorian Facade & Brickwork Restoration</h4>
-                  <span className="text-sm text-gray-600 font-light">From £15,000</span>
                 </div>
                 <p className="text-sm text-gray-600 leading-relaxed">Cleaning and pointing original London stock brickwork and restoring stone masonry facades.</p>
               </a>
               <a href="/services/period-property-restoration" className="block p-6 border border-gray-200 hover:border-gray-900 transition-colors duration-300">
-                <div className="flex justify-between items-start mb-3">
+                <div className="mb-3">
                   <h4 className="font-light text-gray-900 text-lg">Sash Window Refurbishment & Repair</h4>
-                  <span className="text-sm text-gray-600 font-light">From £800</span>
                 </div>
                 <p className="text-sm text-gray-600 leading-relaxed">Restore your original sash windows to perfect working order. We repair the wood, replace broken glass, and make them slide smoothly again.</p>
               </a>
               <a href="/services/period-property-restoration" className="block p-6 border border-gray-200 hover:border-gray-900 transition-colors duration-300">
-                <div className="flex justify-between items-start mb-3">
+                <div className="mb-3">
                   <h4 className="font-light text-gray-900 text-lg">Original Feature Restoration (Cornice & Fireplaces)</h4>
-                  <span className="text-sm text-gray-600 font-light">From £5,000</span>
                 </div>
                 <p className="text-sm text-gray-600 leading-relaxed">Restoring damaged plaster cornices, ceiling roses, and cast-iron fireplaces to their original glory.</p>
               </a>

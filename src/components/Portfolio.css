@@ -1,7 +1,35 @@
-.custom-swiper {
-  padding-bottom: 0 !important;
+/* ══════════════════════════════════════════════════════════════
+   CRITICAL: Tailwind preflight resets break Swiper's flex layout.
+   These rules MUST come first to restore the carousel structure.
+   ══════════════════════════════════════════════════════════════ */
+.swiper {
+  overflow: hidden !important;
+  display: block !important;
 }
 
+.swiper-wrapper {
+  display: flex !important;
+  flex-direction: row !important;
+  width: 100% !important;
+  height: 100% !important;
+  position: relative !important;
+  box-sizing: content-box !important;
+}
+
+.swiper-slide {
+  flex-shrink: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  position: relative !important;
+}
+
+/* ── Swiper: hide default navigation arrows ── */
+.swiper-button-next,
+.swiper-button-prev {
+  display: none !important;
+}
+
+/* ── Portfolio page swiper pagination (homepage/portfolio grid) ── */
 .swiper-custom-pagination,
 .swiper-modal-pagination {
   display: flex;
@@ -13,22 +41,43 @@
 .swiper-modal-pagination .swiper-pagination-bullet {
   width: 8px;
   height: 8px;
-  background: #d1d5db;
+  background: #E4DCCF;
   opacity: 1;
+  border-radius: 999px;
+  transition: background 0.25s ease, width 0.25s ease;
 }
 
 .swiper-custom-pagination .swiper-pagination-bullet-active,
 .swiper-modal-pagination .swiper-pagination-bullet-active {
-  background: #111827;
+  background: #B08D4C;
+  width: 24px;
 }
 
-/* Hide default Swiper navigation */
-.swiper-button-next,
-.swiper-button-prev {
-  display: none !important;
+/* ── Project detail swiper — built-in pagination styled with brass ── */
+.project-swiper {
+  padding-bottom: 44px !important; /* room for dots */
 }
 
-/* Custom navigation buttons */
+.project-swiper .swiper-pagination {
+  bottom: 10px;
+}
+
+.project-swiper .swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  background: #E4DCCF;
+  opacity: 1;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.25s ease, width 0.25s ease;
+}
+
+.project-swiper .swiper-pagination-bullet-active {
+  background: #B08D4C;
+  width: 24px;
+}
+
+/* ── Custom navigation buttons (for .portfolio-swiper-* classes) ── */
 .portfolio-swiper-prev,
 .portfolio-swiper-next,
 .portfolio-modal-prev,
@@ -38,7 +87,7 @@
   transition: all 0.3s ease !important;
 }
 
-/* Mobile styles */
+/* Mobile */
 @media (max-width: 640px) {
   .portfolio-swiper-prev,
   .portfolio-swiper-next,
@@ -67,7 +116,7 @@
   }
 }
 
-/* Desktop hover effect */
+/* Desktop hover reveal */
 @media (min-width: 641px) {
   .portfolio-swiper-prev,
   .portfolio-swiper-next,
@@ -82,4 +131,4 @@
   .swiper:hover .portfolio-modal-next {
     opacity: 1;
   }
-} 
+}

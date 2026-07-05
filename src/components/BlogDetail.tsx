@@ -71,7 +71,7 @@ const BlogDetail: React.FC = () => {
       "@id": "#author",
       "name": post.author.name,
       "jobTitle": post.author.title,
-      "sameAs": "https://livebetterlife.co.uk/about"
+      "sameAs": "https://livebetterlife.co.uk"
     },
     "publisher": {
       "@type": "Organization",
@@ -356,7 +356,7 @@ const BlogDetail: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a
-                href="tel:02012345678"
+                href="tel:+447387844751"
                 className="inline-flex items-center px-6 py-3 bg-gray-900 text-white text-sm font-medium rounded-lg hover:bg-gray-800 transition-colors"
               >
                 📞 Call +44 7387 844751
